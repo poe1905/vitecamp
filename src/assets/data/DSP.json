@@ -1,0 +1,1597 @@
+{
+  "accelerator_1": {
+    "name": "增产剂 mk.1",
+    "key": "accelerator_1",
+    "type": "goods",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-10",
+      "y": "-10"
+    }
+  },
+  "accelerator_2": {
+    "name": "增产剂 mk.2",
+    "key": "accelerator_2",
+    "type": "goods",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-110",
+      "y": "-10"
+    }
+  },
+  "accelerator_3": {
+    "name": "增产剂 mk.3",
+    "key": "accelerator_3",
+    "type": "goods",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-10",
+      "y": "-110"
+    }
+  },
+  "accumulator": {
+    "name": "蓄电器",
+    "key": "accumulator",
+    "type": "goods",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-110",
+      "y": "-110"
+    }
+  },
+  "accumulator_full": {
+    "name": "钢铁",
+    "key": "accumulator_full",
+    "type": "goods",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-210",
+      "y": "-10"
+    }
+  },
+  "anti_matter": {
+    "name": "钢铁",
+    "key": "anti_matter",
+    "type": "goods",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-210",
+      "y": "-110"
+    }
+  },
+  "antimatter_energy_fuel": {
+    "name": "反物质燃料棒",
+    "key": "antimatter_energy_fuel",
+    "type": "goods",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-10",
+      "y": "-210"
+    }
+  },
+  "assembler_1": {
+    "name": "制造台 mk.1",
+    "key": "assembler_1",
+    "type": "architecture",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-110",
+      "y": "-210"
+    }
+  },
+  "assembler_2": {
+    "name": "制造台 mk.2",
+    "key": "assembler_2",
+    "type": "architecture",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-210",
+      "y": "-210"
+    }
+  },
+  "assembler_3": {
+    "name": "制造台 mk.3",
+    "key": "assembler_3",
+    "type": "architecture",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-310",
+      "y": "-10"
+    }
+  },
+  "bamboo_crystal": {
+    "name": "钢铁",
+    "key": "bamboo_crystal",
+    "type": "goods",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-310",
+      "y": "-110"
+    }
+  },
+  "belt_1": {
+    "name": "传送带",
+    "key": "belt_1",
+    "type": "architecture",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-310",
+      "y": "-210"
+    }
+  },
+  "belt_2": {
+    "name": "高速传送带",
+    "key": "belt_2",
+    "type": "architecture",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-10",
+      "y": "-310"
+    }
+  },
+  "belt_3": {
+    "name": "急速传送带",
+    "key": "belt_3",
+    "type": "architecture",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-110",
+      "y": "-310"
+    }
+  },
+  "casimir_crystal": {
+    "name": "卡西米尔晶体",
+    "key": "casimir_crystal",
+    "type": "goods",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-210",
+      "y": "-310"
+    }
+  },
+  "casimir_crystal_lv2": {
+    "name": "钢铁",
+    "key": "casimir_crystal_lv2",
+    "type": "goods",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-310",
+      "y": "-310"
+    }
+  },
+  "charging_pole": {
+    "name": "无线输电塔",
+    "key": "charging_pole",
+    "type": "architecture",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-410",
+      "y": "-10"
+    }
+  },
+  "chemical_plant": {
+    "name": "化工厂",
+    "key": "chemical_plant",
+    "type": "architecture",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-410",
+      "y": "-110"
+    }
+  },
+  "chemical_plant_2": {
+    "name": "量子化工厂",
+    "key": "chemical_plant_2",
+    "type": "architecture",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-410",
+      "y": "-210"
+    }
+  },
+  "circuit_board": {
+    "name": "电路板",
+    "key": "circuit_board",
+    "type": "goods",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-410",
+      "y": "-310"
+    }
+  },
+  "c_matrix": {
+    "name": "结构矩阵",
+    "key": "c_matrix",
+    "type": "goods",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-10",
+      "y": "-410"
+    }
+  },
+  "coal_ore": {
+    "name": "钢铁",
+    "key": "coal_ore",
+    "type": "goods",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-110",
+      "y": "-410"
+    }
+  },
+  "copper_ore": {
+    "name": "处理器",
+    "key": "copper_ore",
+    "type": "goods",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-310",
+      "y": "-410"
+    }
+  },
+  "copper_plate": {
+    "name": "铜块",
+    "key": "copper_plate",
+    "type": "goods",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-410",
+      "y": "-410"
+    }
+  },
+  "crystal_rubber": {
+    "name": "有机晶体",
+    "key": "crystal_rubber",
+    "type": "goods",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-510",
+      "y": "-10"
+    }
+  },
+  "crystal_rubber_lv0": {
+    "name": "钢铁",
+    "key": "crystal_rubber_lv0",
+    "type": "goods",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-510",
+      "y": "-110"
+    }
+  },
+  "delivery_drone": {
+    "name": "配送运输机",
+    "key": "delivery_drone",
+    "type": "goods",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-510",
+      "y": "-210"
+    }
+  },
+  "delivery_machine": {
+    "name": "物流配送器",
+    "key": "delivery_machine",
+    "type": "goods",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-510",
+      "y": "-310"
+    }
+  },
+  "deuterium": {
+    "name": "重氢",
+    "key": "deuterium",
+    "type": "goods",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-510",
+      "y": "-410"
+    }
+  },
+  "deuterium_energy_fuel": {
+    "name": "氚核燃料棒",
+    "key": "deuterium_energy_fuel",
+    "type": "goods",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-10",
+      "y": "-510"
+    }
+  },
+  "Deuterium_extractor": {
+    "name": "钢铁",
+    "key": "Deuterium_extractor",
+    "type": "goods",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-110",
+      "y": "-510"
+    }
+  },
+  "deuterium_formula": {
+    "name": "钢铁",
+    "key": "deuterium_formula",
+    "type": "goods",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-210",
+      "y": "-510"
+    }
+  },
+  "diamond_lv2": {
+    "name": "钢铁",
+    "key": "diamond_lv2",
+    "type": "goods",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-310",
+      "y": "-510"
+    }
+  },
+  "diamond": {
+    "name": "金刚石",
+    "key": "diamond",
+    "type": "goods",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-410",
+      "y": "-510"
+    }
+  },
+  "diamond_ore": {
+    "name": "钢铁",
+    "key": "diamond_ore",
+    "type": "goods",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-510",
+      "y": "-510"
+    }
+  },
+  "dyson_sphere_component": {
+    "name": "戴森球组件",
+    "key": "dyson_sphere_component",
+    "type": "goods",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-610",
+      "y": "-10"
+    }
+  },
+  "electric_motor": {
+    "name": "电动机",
+    "key": "electric_motor",
+    "type": "goods",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-610",
+      "y": "-110"
+    }
+  },
+  "e_matrix": {
+    "name": "能量矩阵",
+    "key": "e_matrix",
+    "type": "goods",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-610",
+      "y": "-210"
+    }
+  },
+  "em_rail_ejector": {
+    "name": "电磁轨道弹射器",
+    "key": "em_rail_ejector",
+    "type": "architecture",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-610",
+      "y": "-310"
+    }
+  },
+  "fractal_silica": {
+    "name": "钢铁",
+    "key": "fractal_silica",
+    "type": "goods",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-610",
+      "y": "-410"
+    }
+  },
+  "energy_exchanger": {
+    "name": "能量枢纽",
+    "key": "energy_exchanger",
+    "type": "architecture",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-610",
+      "y": "-510"
+    }
+  },
+  "fractionator": {
+    "name": "分馏塔",
+    "key": "fractionator",
+    "type": "architecture",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-10",
+      "y": "-610"
+    }
+  },
+  "fuel_plant": {
+    "name": "火力发电厂",
+    "key": "fuel_plant",
+    "type": "goods",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-110",
+      "y": "-610"
+    }
+  },
+  "frame_material": {
+    "name": "框架材料",
+    "key": "frame_material",
+    "type": "architecture",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-210",
+      "y": "-610"
+    }
+  },
+  "fuel_thruster": {
+    "name": "推进器",
+    "key": "fuel_thruster",
+    "type": "goods",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-310",
+      "y": "-610"
+    }
+  },
+  "fusion_capacitor": {
+    "name": "湮灭约束球",
+    "key": "fusion_capacitor",
+    "type": "goods",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-410",
+      "y": "-610"
+    }
+  },
+  "fusion_power_station": {
+    "name": "微型聚变发电站",
+    "key": "fusion_power_station",
+    "type": "architecture",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-510",
+      "y": "-610"
+    }
+  },
+  "fusion_reactor": {
+    "name": "人造恒星",
+    "key": "fusion_reactor",
+    "type": "architecture",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-610",
+      "y": "-610"
+    }
+  },
+  "gas_hydrate": {
+    "name": "钢铁",
+    "key": "gas_hydrate",
+    "type": "goods",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-710",
+      "y": "-10"
+    }
+  },
+  "gear_wheel": {
+    "name": "齿轮",
+    "key": "gear_wheel",
+    "type": "goods",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-710",
+      "y": "-110"
+    }
+  },
+  "geothermal_power_station": {
+    "name": "地热发电站",
+    "key": "geothermal_power_station",
+    "type": "architecture",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-710",
+      "y": "-210"
+    }
+  },
+  "g_matrix": {
+    "name": "引力矩阵",
+    "key": "g_matrix",
+    "type": "goods",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-710",
+      "y": "-310"
+    }
+  },
+  "glass": {
+    "name": "玻璃",
+    "key": "glass",
+    "type": "goods",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-710",
+      "y": "-410"
+    }
+  },
+  "graphene": {
+    "name": "石墨烯",
+    "key": "graphene",
+    "type": "goods",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-710",
+      "y": "-510"
+    }
+  },
+  "graphene_lv2": {
+    "name": "钢铁",
+    "key": "graphene_lv2",
+    "type": "goods",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-710",
+      "y": "-610"
+    }
+  },
+  "graphite": {
+    "name": "高能石墨",
+    "key": "graphite",
+    "type": "goods",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-10",
+      "y": "-710"
+    }
+  },
+  "grating_ore": {
+    "name": "钢铁",
+    "key": "grating_ore",
+    "type": "goods",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-110",
+      "y": "-710"
+    }
+  },
+  "hadron_collider": {
+    "name": "微型粒子对撞机",
+    "key": "hadron_collider",
+    "type": "architecture",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-210",
+      "y": "-710"
+    }
+  },
+  "gravity_lens": {
+    "name": "引力透镜",
+    "key": "gravity_lens",
+    "type": "goods",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-310",
+      "y": "-710"
+    }
+  },
+  "hydrogen": {
+    "name": "钢铁",
+    "key": "hydrogen",
+    "type": "goods",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-410",
+      "y": "-710"
+    }
+  },
+  "hydrogen_energy_fuel": {
+    "name": "液氢燃料棒",
+    "key": "hydrogen_energy_fuel",
+    "type": "goods",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-510",
+      "y": "-710"
+    }
+  },
+  "hyper_magnetism_ring": {
+    "name": "超能磁场环",
+    "key": "hyper_magnetism_ring",
+    "type": "goods",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-610",
+      "y": "-710"
+    }
+  },
+  "i_matrix": {
+    "name": "信息矩阵",
+    "key": "i_matrix",
+    "type": "goods",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-710",
+      "y": "-710"
+    }
+  },
+  "inserter_1": {
+    "name": "分拣器",
+    "key": "inserter_1",
+    "type": "architecture",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-810",
+      "y": "-10"
+    }
+  },
+  "inserter_2": {
+    "name": "高速分拣器",
+    "key": "inserter_2",
+    "type": "architecture",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-810",
+      "y": "-110"
+    }
+  },
+  "inserter_3": {
+    "name": "极速分拣器",
+    "key": "inserter_3",
+    "type": "architecture",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-810",
+      "y": "-210"
+    }
+  },
+  "interstellar_logistic_station": {
+    "name": "星际物流运输站",
+    "key": "interstellar_logistic_station",
+    "type": "architecture",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-810",
+      "y": "-310"
+    }
+  },
+  "ion_thruster": {
+    "name": "加力推进器",
+    "key": "ion_thruster",
+    "type": "goods",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-810",
+      "y": "-410"
+    }
+  },
+  "iron_ore": {
+    "name": "钢铁",
+    "key": "iron_ore",
+    "type": "goods",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-810",
+      "y": "-510"
+    }
+  },
+  "iron_plate": {
+    "name": "铁块",
+    "key": "iron_plate",
+    "type": "goods",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-810",
+      "y": "-610"
+    }
+  },
+  "lab": {
+    "name": "矩阵研究站",
+    "key": "lab",
+    "type": "architecture",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-810",
+      "y": "-710"
+    }
+  },
+  "logistic_drone": {
+    "name": "物流运输机",
+    "key": "logistic_drone",
+    "type": "goods",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-10",
+      "y": "-810"
+    }
+  },
+  "logistic_station": {
+    "name": "行星内物流运输站",
+    "key": "logistic_station",
+    "type": "architecture",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-110",
+      "y": "-810"
+    }
+  },
+  "logistic_vessel": {
+    "name": "星际运输机",
+    "key": "logistic_vessel",
+    "type": "goods",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-210",
+      "y": "-810"
+    }
+  },
+  "magnet": {
+    "name": "磁铁",
+    "key": "magnet",
+    "type": "goods",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-310",
+      "y": "-810"
+    }
+  },
+  "magnetism_wire": {
+    "name": "磁线圈",
+    "key": "magnetism_wire",
+    "type": "goods",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-410",
+      "y": "-810"
+    }
+  },
+  "mag_turbine": {
+    "name": "电磁涡轮",
+    "key": "mag_turbine",
+    "type": "goods",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-510",
+      "y": "-810"
+    }
+  },
+  "matrix": {
+    "name": "钢铁",
+    "key": "matrix",
+    "type": "goods",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-610",
+      "y": "-810"
+    }
+  },
+  "micro_component": {
+    "name": "微晶元件",
+    "key": "micro_component",
+    "type": "goods",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-710",
+      "y": "-810"
+    }
+  },
+  "mining_drill": {
+    "name": "采矿机",
+    "key": "mining_drill",
+    "type": "architecture",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-810",
+      "y": "-810"
+    }
+  },
+  "mining_drill_mk2": {
+    "name": "大型采矿机",
+    "key": "mining_drill_mk2",
+    "type": "architecture",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-910",
+      "y": "-10"
+    }
+  },
+  "monitor": {
+    "name": "流速检测器",
+    "key": "monitor",
+    "type": "architecture",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-910",
+      "y": "-110"
+    }
+  },
+  "mono_mag_ore": {
+    "name": "钢铁",
+    "key": "mono_mag_ore",
+    "type": "goods",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-910",
+      "y": "-210"
+    }
+  },
+  "nanotube": {
+    "name": "碳纳米管",
+    "key": "nanotube",
+    "type": "goods",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-910",
+      "y": "-310"
+    }
+  },
+  "nanotube_lv2": {
+    "name": "钢铁",
+    "key": "nanotube_lv2",
+    "type": "goods",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-910",
+      "y": "-410"
+    }
+  },
+  "oil": {
+    "name": "钢铁",
+    "key": "oil",
+    "type": "goods",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-910",
+      "y": "-510"
+    }
+  },
+  "oil_extractor": {
+    "name": "原油萃取站",
+    "key": "oil_extractor",
+    "type": "architecture",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-910",
+      "y": "-610"
+    }
+  },
+  "oil_refinery": {
+    "name": "原油精炼厂",
+    "key": "oil_refinery",
+    "type": "architecture",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-910",
+      "y": "-710"
+    }
+  },
+  "orbital_collector": {
+    "name": "轨道采集器",
+    "key": "orbital_collector",
+    "type": "architecture",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-910",
+      "y": "-810"
+    }
+  },
+  "orbital_substation": {
+    "name": "卫星配电塔",
+    "key": "orbital_substation",
+    "type": "architecture",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-10",
+      "y": "-910"
+    }
+  },
+  "partical_capacitor": {
+    "name": "粒子容器",
+    "key": "partical_capacitor",
+    "type": "goods",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-110",
+      "y": "-910"
+    }
+  },
+  "partical_capacitor_lv2": {
+    "name": "钢铁",
+    "key": "partical_capacitor_lv2",
+    "type": "goods",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-210",
+      "y": "-910"
+    }
+  },
+  "particle_wide_band": {
+    "name": "粒子宽带",
+    "key": "particle_wide_band",
+    "type": "goods",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-310",
+      "y": "-910"
+    }
+  },
+  "photon_capacitor_full": {
+    "name": "钢铁",
+    "key": "photon_capacitor_full",
+    "type": "goods",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-410",
+      "y": "-910"
+    }
+  },
+  "photon_formula": {
+    "name": "质能存储 （生产反物质配方）",
+    "key": "photon_formula",
+    "type": "goods",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-510",
+      "y": "-910"
+    }
+  },
+  "photo_shifter": {
+    "name": "光子合并器",
+    "key": "photo_shifter",
+    "type": "goods",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-610",
+      "y": "-910"
+    }
+  },
+  "photo_shifter_lv2": {
+    "name": "钢铁",
+    "key": "photo_shifter_lv2",
+    "type": "goods",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-710",
+      "y": "-910"
+    }
+  },
+  "piler": {
+    "name": "自动集装器",
+    "key": "piler",
+    "type": "architecture",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-810",
+      "y": "-910"
+    }
+  },
+  "plane_filter": {
+    "name": "位面过滤器",
+    "key": "plane_filter",
+    "type": "goods",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-910",
+      "y": "-910"
+    }
+  },
+  "plant_fuel": {
+    "name": "钢铁",
+    "key": "plant_fuel",
+    "type": "goods",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-1010",
+      "y": "-10"
+    }
+  },
+  "plasma_generator": {
+    "name": "电浆激发器",
+    "key": "plasma_generator",
+    "type": "goods",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-1010",
+      "y": "-110"
+    }
+  },
+  "plasma_refining": {
+    "name": "钢铁",
+    "key": "plasma_refining",
+    "type": "goods",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-1010",
+      "y": "-210"
+    }
+  },
+  "plastic": {
+    "name": "聚乙烯",
+    "key": "plastic",
+    "type": "goods",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-1010",
+      "y": "-310"
+    }
+  },
+  "prism": {
+    "name": "棱镜",
+    "key": "prism",
+    "type": "goods",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-1010",
+      "y": "-410"
+    }
+  },
+  "quantum_processor": {
+    "name": "量子芯片",
+    "key": "quantum_processor",
+    "type": "goods",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-1010",
+      "y": "-510"
+    }
+  },
+  "ray_receiver": {
+    "name": "射线接收站",
+    "key": "ray_receiver",
+    "type": "architecture",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-1010",
+      "y": "-610"
+    }
+  },
+  "refined_oil": {
+    "name": "钢铁",
+    "key": "refined_oil",
+    "type": "goods",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-1010",
+      "y": "-710"
+    }
+  },
+  "reforming_refine": {
+    "name": "钢铁",
+    "key": "reforming_refine",
+    "type": "goods",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-1010",
+      "y": "-810"
+    }
+  },
+  "rocket": {
+    "name": "小型运载火箭",
+    "key": "rocket",
+    "type": "goods",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-1010",
+      "y": "-910"
+    }
+  },
+  "silicium_high_purity": {
+    "name": "晶格硅",
+    "key": "silicium_high_purity",
+    "type": "goods",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-10",
+      "y": "-1010"
+    }
+  },
+  "silicium_high_purity_lv2": {
+    "name": "钢铁",
+    "key": "silicium_high_purity_lv2",
+    "type": "goods",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-110",
+      "y": "-1010"
+    }
+  },
+  "silicium_ore": {
+    "name": "硅石",
+    "key": "silicium_ore",
+    "type": "goods",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-210",
+      "y": "-1010"
+    }
+  },
+  "silicium_single_crystal": {
+    "name": "高纯硅块",
+    "key": "silicium_single_crystal",
+    "type": "goods",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-310",
+      "y": "-1010"
+    }
+  },
+  "smelter": {
+    "name": "电弧熔炉",
+    "key": "smelter",
+    "type": "architecture",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-410",
+      "y": "-1010"
+    }
+  },
+  "smelter_2": {
+    "name": "位面熔炉",
+    "key": "smelter_2",
+    "type": "architecture",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-510",
+      "y": "-1010"
+    }
+  },
+  "solar_collector": {
+    "name": "太阳帆",
+    "key": "solar_collector",
+    "type": "goods",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-610",
+      "y": "-1010"
+    }
+  },
+  "solar_panel": {
+    "name": "太阳能板",
+    "key": "solar_panel",
+    "type": "architecture",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-710",
+      "y": "-1010"
+    }
+  },
+  "space_warper": {
+    "name": "空间翘曲器",
+    "key": "space_warper",
+    "type": "goods",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-810",
+      "y": "-1010"
+    }
+  },
+  "space_warper_lv2": {
+    "name": "钢铁",
+    "key": "space_warper_lv2",
+    "type": "goods",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-910",
+      "y": "-1010"
+    }
+  },
+  "splitter_4dir": {
+    "name": "四项分流器",
+    "key": "splitter_4dir",
+    "type": "architecture",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-1010",
+      "y": "-1010"
+    }
+  },
+  "spray_coater": {
+    "name": "喷涂机",
+    "key": "spray_coater",
+    "type": "architecture",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-1110",
+      "y": "-10"
+    }
+  },
+  "steel_plate": {
+    "name": "钢材",
+    "key": "steel_plate",
+    "type": "goods",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-1110",
+      "y": "-110"
+    }
+  },
+  "stone_brick": {
+    "name": "石材",
+    "key": "stone_brick",
+    "type": "goods",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-1110",
+      "y": "-210"
+    }
+  },
+  "stone_ore": {
+    "name": "钢铁",
+    "key": "stone_ore",
+    "type": "goods",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-1110",
+      "y": "-310"
+    }
+  },
+  "storage_1": {
+    "name": "小型储物仓",
+    "key": "storage_1",
+    "type": "architecture",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-1110",
+      "y": "-410"
+    }
+  },
+  "storage_2": {
+    "name": "大型储物仓",
+    "key": "storage_2",
+    "type": "architecture",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-1110",
+      "y": "-510"
+    }
+  },
+  "storage_tank": {
+    "name": "储液罐",
+    "key": "storage_tank",
+    "type": "architecture",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-1110",
+      "y": "-610"
+    }
+  },
+  "strange_matter_generator": {
+    "name": "奇异物质",
+    "key": "strange_matter_generator",
+    "type": "goods",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-1110",
+      "y": "-710"
+    }
+  },
+  "sulphuric_acid": {
+    "name": "硫酸",
+    "key": "sulphuric_acid",
+    "type": "goods",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-1110",
+      "y": "-810"
+    }
+  },
+  "terrain_tool": {
+    "name": "地基",
+    "key": "terrain_tool",
+    "type": "architecture",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-1110",
+      "y": "-910"
+    }
+  },
+  "tesla_coil": {
+    "name": "电力感应塔",
+    "key": "tesla_coil",
+    "type": "architecture",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-1110",
+      "y": "-1010"
+    }
+  },
+  "titan_crystal": {
+    "name": "钛晶石",
+    "key": "titan_crystal",
+    "type": "goods",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-10",
+      "y": "-1110"
+    }
+  },
+  "titan_glass": {
+    "name": "钛玻璃",
+    "key": "titan_glass",
+    "type": "goods",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-110",
+      "y": "-1110"
+    }
+  },
+  "titanium_alloy": {
+    "name": "钛合金",
+    "key": "titanium_alloy",
+    "type": "goods",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-210",
+      "y": "-1110"
+    }
+  },
+  "titanium_ore": {
+    "name": "钢铁",
+    "key": "titanium_ore",
+    "type": "goods",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-310",
+      "y": "-1110"
+    }
+  },
+  "titanium_plate": {
+    "name": "钛块",
+    "key": "titanium_plate",
+    "type": "goods",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-410",
+      "y": "-1110"
+    }
+  },
+  "t_matrix": {
+    "name": "电磁矩阵",
+    "key": "t_matrix",
+    "type": "goods",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-510",
+      "y": "-1110"
+    }
+  },
+  "u_matrix": {
+    "name": "宇宙矩阵",
+    "key": "u_matrix",
+    "type": "goods",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-1210",
+      "y": "-110"
+    }
+  },
+  "vertical_launching_silo": {
+    "name": "垂直发射井",
+    "key": "vertical_launching_silo",
+    "type": "architecture",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-1210",
+      "y": "-210"
+    }
+  },
+  "water": {
+    "name": "钢铁",
+    "key": "water",
+    "type": "goods",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-1210",
+      "y": "-310"
+    }
+  },
+  "water_pump": {
+    "name": "抽水站",
+    "key": "water_pump",
+    "type": "architecture",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-1210",
+      "y": "-410"
+    }
+  },
+  "wind_turbine": {
+    "name": "风力涡轮机",
+    "key": "wind_turbine",
+    "type": "architecture",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-1210",
+      "y": "-510"
+    }
+  },
+  "wood": {
+    "name": "钢铁",
+    "key": "wood",
+    "type": "goods",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-1210",
+      "y": "-610"
+    }
+  },
+  "none": {
+    "name": "站位格",
+    "key": "none",
+    "type": "goods",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-1205",
+      "y": "-1093"
+    }
+  },
+  "X_ray": {
+    "name": "钢铁",
+    "key": "X_ray",
+    "type": "goods",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-1210",
+      "y": "-710"
+    }
+  }
+}

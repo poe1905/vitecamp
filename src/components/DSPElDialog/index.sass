@@ -1,0 +1,49 @@
+
+.dsp-dialog
+  .el-dialog
+    height: 500px
+    background-color: transparent
+    // backdrop-filter: blur(3px)//毛玻璃属性.
+    width: 650px
+    height: 650px
+    box-shadow: none
+    .el-dialog__header
+      margin: 0
+      padding: 0
+    .el-dialog__headerbtn
+      z-index: 1000
+    .el-dialog__body
+      padding: 0
+      // background-color: #f5d000
+      // backdrop-filter: blur(3px)
+      width: 650px
+      height: 650px
+  #yin-yang
+    height: 100%
+    width: 100%
+
+    background-color: transparent
+    clip-path: polygon(23px 0px, 160px 0px,202px 18px ,638px 18px,640px 20px, 639px 575px,633px 580px,616px 580px,613px 585px,1px 586px,0px 24px)
+    // clip-path: polygon(31px 191px, 231px 180px, 364px 31px,435px 214px,619px 296px,463px 423px,444px 621px,277px 513px,80px 557px,132px 362px)
+    .box-content
+      color: #222
+      background-color: #6496bceb
+      width: 100%
+      height: 100%
+      ul > li
+        width: 60px
+        height: 60px
+        text-align: center
+        line-height: 60px
+      .items
+        width: 640px
+        height: 368px
+        display: grid
+        justify-content: space-between
+        grid-template-columns: repeat(auto-fill, 40px)
+        grid-gap: 0px 8px
+
+        div:hover
+          background-color: #527996
+    .activate
+      background-color: #426279

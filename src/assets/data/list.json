@@ -1,0 +1,706 @@
+{
+  "goods": [
+    [
+      {
+        "key": "iron_plate",
+        "name": "铁块"
+      },
+      {
+        "key": "copper_plate",
+        "name": "铜块"
+      },
+      {
+        "key": "silicium_single_crystal",
+        "name": "高纯硅块"
+      },
+      {
+        "key": "titanium_plate",
+        "name": "钛块"
+      },
+      {
+        "key": "stone_brick",
+        "name": "石材"
+      },
+      {
+        "key": "graphite",
+        "name": "高能石墨"
+      },
+      {
+        "key": "none",
+        "name": "暂无"
+      },
+      {
+        "key": "graphene",
+        "name": "石墨烯"
+      },
+      {
+        "key": "plastic",
+        "name": "聚乙烯"
+      },
+      {
+        "key": "accelerator_1",
+        "name": "增产剂 mk.1"
+      },
+      {
+        "key": "accelerator_2",
+        "name": "增产剂 mk.2"
+      },
+      {
+        "key": "accelerator_3",
+        "name": "增产剂 mk.3"
+      }
+    ],
+    [
+      {
+        "key": "magnet",
+        "name": "磁铁"
+      },
+      {
+        "key": "magnetism_wire",
+        "name": "磁线圈"
+      },
+      {
+        "key": "silicium_high_purity",
+        "name": "晶格硅"
+      },
+      {
+        "key": "titanium_alloy",
+        "name": "钛合金"
+      },
+      {
+        "key": "glass",
+        "name": "玻璃"
+      },
+      {
+        "key": "diamond",
+        "name": "金刚石"
+      },
+      {
+        "key": "none",
+        "name": "暂无"
+      },
+      {
+        "key": "none",
+        "name": "暂无"
+      },
+      {
+        "key": "crystal_rubber",
+        "name": "有机晶体"
+      },
+      {
+        "key": "hydrogen_energy_fuel",
+        "name": "液氢燃料棒"
+      },
+      {
+        "key": "deuterium_energy_fuel",
+        "name": "氚核燃料棒"
+      },
+      {
+        "key": "antimatter_energy_fuel",
+        "name": "反物质燃料棒"
+      }
+    ],
+    [
+      {
+        "key": "steel_plate",
+        "name": "钢材"
+      },
+      {
+        "key": "electric_motor",
+        "name": "电动机"
+      },
+      {
+        "key": "none",
+        "name": "暂无"
+      },
+      {
+        "key": "titan_glass",
+        "name": "钛玻璃"
+      },
+      {
+        "key": "prism",
+        "name": "棱镜"
+      },
+      {
+        "key": "none",
+        "name": "暂无"
+      },
+      {
+        "key": "none",
+        "name": "暂无"
+      },
+      {
+        "key": "titan_crystal",
+        "name": "钛晶石"
+      },
+      {
+        "key": "none",
+        "name": "暂无"
+      },
+      {
+        "key": "fuel_thruster",
+        "name": "推进器"
+      },
+      {
+        "key": "ion_thruster",
+        "name": "加力推进器"
+      },
+      {
+        "key": "strange_matter_generator",
+        "name": "奇异物质"
+      }
+    ],
+    [
+      {
+        "key": "gear_wheel",
+        "name": "齿轮"
+      },
+      {
+        "key": "mag_turbine",
+        "name": "电磁涡轮"
+      },
+      {
+        "key": "silicium_ore",
+        "name": "硅石"
+      },
+      {
+        "key": "circuit_board",
+        "name": "电路板"
+      },
+      {
+        "key": "gravity_lens",
+        "name": "引力透镜"
+      },
+      {
+        "key": "sulphuric_acid",
+        "name": "硫酸"
+      },
+      {
+        "key": "none",
+        "name": "暂无"
+      },
+      {
+        "key": "nanotube",
+        "name": "碳纳米管"
+      },
+      {
+        "key": "delivery_drone",
+        "name": "配送运输机"
+      },
+      {
+        "key": "logistic_drone",
+        "name": "物流运输机"
+      },
+      {
+        "key": "logistic_vessel",
+        "name": "星际运输机"
+      },
+      {
+        "key": "rocket",
+        "name": "小型运载火箭"
+      }
+    ],
+    [
+      {
+        "key": "plasma_generator",
+        "name": "电浆激发器"
+      },
+      {
+        "key": "hyper_magnetism_ring",
+        "name": "超能磁场环"
+      },
+      {
+        "key": "particle_wide_band",
+        "name": "粒子宽带"
+      },
+      {
+        "key": "copper_ore",
+        "name": "处理器"
+      },
+      {
+        "key": "casimir_crystal",
+        "name": "卡西米尔晶体"
+      },
+      {
+        "key": "partical_capacitor",
+        "name": "粒子容器"
+      },
+      {
+        "key": "deuterium",
+        "name": "重氢"
+      },
+      {
+        "key": "none",
+        "name": "暂无"
+      },
+      {
+        "key": "plane_filter",
+        "name": "位面过滤器"
+      },
+      {
+        "key": "solar_collector",
+        "name": "太阳帆"
+      },
+      {
+        "key": "frame_material",
+        "name": "框架材料"
+      },
+      {
+        "key": "dyson_sphere_component",
+        "name": "戴森球组件"
+      }
+    ],
+    [
+      {
+        "key": "photo_shifter",
+        "name": "光子合并器"
+      },
+      {
+        "key": "none",
+        "name": "暂无"
+      },
+      {
+        "key": "micro_component",
+        "name": "微晶元件"
+      },
+      {
+        "key": "quantum_processor",
+        "name": "量子芯片"
+      },
+      {
+        "key": "none",
+        "name": "暂无"
+      },
+      {
+        "key": "none",
+        "name": "暂无"
+      },
+      {
+        "key": "space_warper",
+        "name": "空间翘曲器"
+      },
+      {
+        "key": "photon_formula",
+        "name": "质能存储-生产反物质"
+      },
+      {
+        "key": "fusion_capacitor",
+        "name": "湮灭约束球"
+      },
+      {
+        "key": "none",
+        "name": "暂无"
+      },
+      {
+        "key": "none",
+        "name": "暂无"
+      },
+      {
+        "key": "none",
+        "name": "暂无"
+      }
+    ],
+    [
+      {
+        "key": "t_matrix",
+        "name": "电磁矩阵"
+      },
+      {
+        "key": "e_matrix",
+        "name": "能量矩阵"
+      },
+      {
+        "key": "c_matrix",
+        "name": "结构矩阵"
+      },
+      {
+        "key": "i_matrix",
+        "name": "信息矩阵"
+      },
+      {
+        "key": "g_matrix",
+        "name": "引力矩阵"
+      },
+      {
+        "key": "u_matrix",
+        "name": "宇宙矩阵"
+      },
+      {
+        "key": "none",
+        "name": "暂无"
+      },
+      {
+        "key": "none",
+        "name": "暂无"
+      },
+      {
+        "key": "none",
+        "name": "暂无"
+      },
+      {
+        "key": "none",
+        "name": "暂无"
+      },
+      {
+        "key": "none",
+        "name": "暂无"
+      },
+      {
+        "key": "terrain_tool",
+        "name": "地基"
+      }
+    ]
+  ],
+  "architecture": [
+    [
+      {
+        "key": "tesla_coil",
+        "name": "电力感应塔"
+      },
+      {
+        "key": "charging_pole",
+        "name": "无线输电塔"
+      },
+      {
+        "key": "orbital_substation",
+        "name": "卫星配电塔"
+      },
+      {
+        "key": "wind_turbine",
+        "name": "风力涡轮机"
+      },
+      {
+        "key": "fuel_plant",
+        "name": "火力发电厂"
+      },
+      {
+        "key": "solar_panel",
+        "name": "太阳能板"
+      },
+      {
+        "key": "accumulator",
+        "name": "蓄电器"
+      },
+      {
+        "key": "geothermal_power_station",
+        "name": "地热发电站"
+      },
+      {
+        "key": "fusion_power_station",
+        "name": "微型聚变发电站"
+      },
+      {
+        "key": "energy_exchanger",
+        "name": "能量枢纽"
+      },
+      {
+        "key": "ray_receiver",
+        "name": "射线接收站"
+      },
+      {
+        "key": "fusion_reactor",
+        "name": "人造恒星"
+      }
+    ],
+    [
+      {
+        "key": "belt_1",
+        "name": "传送带"
+      },
+      {
+        "key": "belt_2",
+        "name": "高速传送带"
+      },
+      {
+        "key": "belt_3",
+        "name": "急速传送带"
+      },
+      {
+        "key": "splitter_4dir",
+        "name": "四项分流器"
+      },
+      {
+        "key": "piler",
+        "name": "自动集装器"
+      },
+      {
+        "key": "storage_1",
+        "name": "小型储物仓"
+      },
+      {
+        "key": "storage_2",
+        "name": "大型储物仓"
+      },
+      {
+        "key": "storage_tank",
+        "name": "储液罐"
+      },
+      {
+        "key": "delivery_machine",
+        "name": "物流配送器"
+      },
+      {
+        "key": "logistic_station",
+        "name": "行星内物流运输站"
+      },
+      {
+        "key": "interstellar_logistic_station",
+        "name": "星际物流运输站"
+      },
+      {
+        "key": "orbital_collector",
+        "name": "轨道采集器"
+      }
+    ],
+    [
+      {
+        "key": "inserter_1",
+        "name": "分拣器"
+      },
+      {
+        "key": "inserter_2",
+        "name": "高速分拣器"
+      },
+      {
+        "key": "inserter_3",
+        "name": "极速分拣器"
+      },
+      {
+        "key": "monitor",
+        "name": "流速检测器"
+      },
+      {
+        "key": "mining_drill",
+        "name": "采矿机"
+      },
+      {
+        "key": "mining_drill_mk2",
+        "name": "大型采矿机"
+      },
+      {
+        "key": "water_pump",
+        "name": "抽水站"
+      },
+      {
+        "key": "oil_extractor",
+        "name": "原油萃取站"
+      },
+      {
+        "key": "oil_refinery",
+        "name": "原油精炼厂"
+      },
+      {
+        "key": "hadron_collider",
+        "name": "微型粒子对撞机"
+      },
+      {
+        "key": "em_rail_ejector",
+        "name": "电磁轨道弹射器"
+      },
+      {
+        "key": "vertical_launching_silo",
+        "name": "垂直发射井"
+      }
+    ],
+    [
+      {
+        "key": "assembler_1",
+        "name": "制造台 mk.1"
+      },
+      {
+        "key": "assembler_2",
+        "name": "制造台 mk.2"
+      },
+      {
+        "key": "assembler_3",
+        "name": "制造台 mk.3"
+      },
+      {
+        "key": "smelter",
+        "name": "电弧熔炉"
+      },
+      {
+        "key": "smelter_2",
+        "name": "位面熔炉"
+      },
+      {
+        "key": "lab",
+        "name": "矩阵研究站"
+      },
+      {
+        "key": "spray_coater",
+        "name": "喷涂机"
+      },
+      {
+        "key": "fractionator",
+        "name": "分馏塔"
+      },
+      {
+        "key": "chemical_plant",
+        "name": "化工厂"
+      },
+      {
+        "key": "chemical_plant_2",
+        "name": "量子化工厂"
+      },
+      {
+        "key": "none",
+        "name": "暂无"
+      },
+      {
+        "key": "none",
+        "name": "暂无"
+      }
+    ],
+    [
+      {
+        "key": "none",
+        "name": "制造台 mk.1"
+      },
+      {
+        "key": "none",
+        "name": "制造台 mk.2"
+      },
+      {
+        "key": "none",
+        "name": "制造台 mk.3"
+      },
+      {
+        "key": "none",
+        "name": "电弧熔炉"
+      },
+      {
+        "key": "none",
+        "name": "位面熔炉"
+      },
+      {
+        "key": "none",
+        "name": "矩阵研究站"
+      },
+      {
+        "key": "none",
+        "name": "喷涂机"
+      },
+      {
+        "key": "none",
+        "name": "分馏塔"
+      },
+      {
+        "key": "none",
+        "name": "化工厂"
+      },
+      {
+        "key": "none",
+        "name": "量子化工厂"
+      },
+      {
+        "key": "none",
+        "name": "暂无"
+      },
+      {
+        "key": "none",
+        "name": "暂无"
+      }
+    ],
+    [
+      {
+        "key": "none",
+        "name": "制造台 mk.1"
+      },
+      {
+        "key": "none",
+        "name": "制造台 mk.2"
+      },
+      {
+        "key": "none",
+        "name": "制造台 mk.3"
+      },
+      {
+        "key": "none",
+        "name": "电弧熔炉"
+      },
+      {
+        "key": "none",
+        "name": "位面熔炉"
+      },
+      {
+        "key": "none",
+        "name": "矩阵研究站"
+      },
+      {
+        "key": "none",
+        "name": "喷涂机"
+      },
+      {
+        "key": "none",
+        "name": "分馏塔"
+      },
+      {
+        "key": "none",
+        "name": "化工厂"
+      },
+      {
+        "key": "none",
+        "name": "量子化工厂"
+      },
+      {
+        "key": "none",
+        "name": "暂无"
+      },
+      {
+        "key": "none",
+        "name": "暂无"
+      }
+    ],
+    [
+      {
+        "key": "none",
+        "name": "制造台 mk.1"
+      },
+      {
+        "key": "none",
+        "name": "制造台 mk.2"
+      },
+      {
+        "key": "none",
+        "name": "制造台 mk.3"
+      },
+      {
+        "key": "none",
+        "name": "电弧熔炉"
+      },
+      {
+        "key": "none",
+        "name": "位面熔炉"
+      },
+      {
+        "key": "none",
+        "name": "矩阵研究站"
+      },
+      {
+        "key": "none",
+        "name": "喷涂机"
+      },
+      {
+        "key": "none",
+        "name": "分馏塔"
+      },
+      {
+        "key": "none",
+        "name": "化工厂"
+      },
+      {
+        "key": "none",
+        "name": "量子化工厂"
+      },
+      {
+        "key": "none",
+        "name": "暂无"
+      },
+      {
+        "key": "none",
+        "name": "暂无"
+      }
+    ]
+  ]
+}
