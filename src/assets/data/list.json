@@ -280,7 +280,7 @@
         "name": "空间翘曲器"
       },
       {
-        "key": "photon_formula",
+        "key": "anti_matter",
         "name": "质能存储-生产反物质"
       },
       {
@@ -330,8 +330,8 @@
         "name": "暂无"
       },
       {
-        "key": "none",
-        "name": "暂无"
+        "key": "photon_capacitor_full",
+        "name": "临界光子"
       },
       {
         "key": "none",

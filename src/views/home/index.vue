@@ -1,5 +1,6 @@
 <template>
-  <div class="flex select-none">
+  <!-- select-none -->
+  <div class="flex">
     <left />
     <right class="w-full" />
   </div>

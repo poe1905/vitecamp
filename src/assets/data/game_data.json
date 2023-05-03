@@ -1,0 +1,1999 @@
+{
+  "recipe_data": [
+    {
+      "material": {},
+      "product": {
+        "wood": 1
+      },
+      "facility": "轻型工业机甲",
+      "time": 1,
+      "additional_mode": 0
+    },
+    {
+      "material": {},
+      "product": {
+        "plant_fuel": 1
+      },
+      "facility": "轻型工业机甲",
+      "time": 1,
+      "additional_mode": 0
+    },
+    {
+      "material": {},
+      "product": {
+        "iron_ore": 1
+      },
+      "facility": "采矿设备",
+      "time": 1,
+      "additional_mode": 0
+    },
+    {
+      "material": {},
+      "product": {
+        "copper_ore": 1
+      },
+      "facility": "采矿设备",
+      "time": 1,
+      "additional_mode": 0
+    },
+    {
+      "material": {},
+      "product": {
+        "stone_ore": 1
+      },
+      "facility": "采矿设备",
+      "time": 1,
+      "additional_mode": 0
+    },
+    {
+      "material": {},
+      "product": {
+        "coal_ore": 1
+      },
+      "facility": "采矿设备",
+      "time": 1,
+      "additional_mode": 0
+    },
+    {
+      "material": {},
+      "product": {
+        "silicium_ore": 1
+      },
+      "facility": "采矿设备",
+      "time": 1,
+      "additional_mode": 0
+    },
+    {
+      "material": {
+        "stone_ore": 10
+      },
+      "product": {
+        "silicium_ore": 1
+      },
+      "facility": "冶炼设备",
+      "time": 10,
+      "additional_mode": 3
+    },
+    {
+      "material": {},
+      "product": {
+        "titanium_ore": 1
+      },
+      "facility": "采矿设备",
+      "time": 1,
+      "additional_mode": 0
+    },
+    {
+      "material": {},
+      "product": {
+        "water": 1
+      },
+      "facility": "抽水设备",
+      "time": 1.2,
+      "additional_mode": 0
+    },
+    {
+      "material": {},
+      "product": {
+        "oil": 1
+      },
+      "facility": "抽油设备",
+      "time": 1,
+      "additional_mode": 0
+    },
+    {
+      "material": {},
+      "product": {
+        "hydrogen": 1
+      },
+      "facility": "orbital_collector",
+      "time": 1,
+      "additional_mode": 0
+    },
+    {
+      "material": {},
+      "product": {
+        "deuterium": 1
+      },
+      "facility": "orbital_collector",
+      "time": 1,
+      "additional_mode": 0
+    },
+    {
+      "material": {
+        "hydrogen": 10
+      },
+      "product": {
+        "deuterium": 5
+      },
+      "facility": "hadron_collider",
+      "time": 2.5,
+      "additional_mode": 2
+    },
+    {
+      "material": {
+        "hydrogen": 1
+      },
+      "product": {
+        "deuterium": 1
+      },
+      "facility": "分馏设备",
+      "time": 100,
+      "additional_mode": 2
+    },
+    {
+      "material": {
+        "photon_capacitor_full": 2
+      },
+      "product": {
+        "anti_matter": 2,
+        "hydrogen": 2
+      },
+      "facility": "hadron_collider",
+      "time": 2,
+      "additional_mode": 2
+    },
+    {
+      "material": {},
+      "product": {
+        "gas_hydrate": 1
+      },
+      "facility": "采矿设备",
+      "time": 1,
+      "additional_mode": 0
+    },
+    {
+      "material": {},
+      "product": {
+        "gas_hydrate": 1
+      },
+      "facility": "orbital_collector",
+      "time": 1,
+      "additional_mode": 0
+    },
+    {
+      "material": {},
+      "product": {
+        "diamond_ore": 1
+      },
+      "facility": "采矿设备",
+      "time": 1,
+      "additional_mode": 0
+    },
+    {
+      "material": {},
+      "product": {
+        "fractal_silica": 1
+      },
+      "facility": "采矿设备",
+      "time": 1,
+      "additional_mode": 0
+    },
+    {
+      "material": {},
+      "product": {
+        "grating_ore": 1
+      },
+      "facility": "采矿设备",
+      "time": 1,
+      "additional_mode": 0
+    },
+    {
+      "material": {},
+      "product": {
+        "crystal_rubber": 1
+      },
+      "facility": "采矿设备",
+      "time": 1,
+      "additional_mode": 0
+    },
+    {
+      "material": {
+        "plastic": 2,
+        "refined_oil": 1,
+        "water": 1
+      },
+      "product": {
+        "crystal_rubber": 1
+      },
+      "facility": "化工设备",
+      "time": 6,
+      "additional_mode": 3
+    },
+    {
+      "material": {
+        "wood": 20,
+        "plant_fuel": 20,
+        "water": 10
+      },
+      "product": {
+        "crystal_rubber": 1
+      },
+      "facility": "化工设备",
+      "time": 6,
+      "additional_mode": 3
+    },
+    {
+      "material": {},
+      "product": {
+        "bamboo_crystal": 1
+      },
+      "facility": "采矿设备",
+      "time": 1,
+      "additional_mode": 0
+    },
+    {
+      "material": {},
+      "product": {
+        "mono_mag_ore": 1
+      },
+      "facility": "采矿设备",
+      "time": 1,
+      "additional_mode": 0
+    },
+    {
+      "material": {},
+      "product": {
+        "photon_capacitor_full": 1
+      },
+      "facility": "ray_receiver",
+      "time": 10,
+      "additional_mode": 0
+    },
+    {
+      "material": {
+        "gravity_lens": 0.008333
+      },
+      "product": {
+        "photon_capacitor_full": 1
+      },
+      "facility": "ray_receiver",
+      "time": 5,
+      "additional_mode": 4
+    },
+    {
+      "material": {},
+      "product": {
+        "sulphuric_acid": 1
+      },
+      "facility": "抽水设备",
+      "time": 1.2,
+      "additional_mode": 0
+    },
+    {
+      "material": {
+        "refined_oil": 6,
+        "stone_ore": 8,
+        "water": 4
+      },
+      "product": {
+        "sulphuric_acid": 4
+      },
+      "facility": "化工设备",
+      "time": 6,
+      "additional_mode": 3
+    },
+    {
+      "material": {
+        "iron_ore": 1
+      },
+      "product": {
+        "iron_plate": 1
+      },
+      "facility": "冶炼设备",
+      "time": 1,
+      "additional_mode": 3
+    },
+    {
+      "material": {
+        "copper_ore": 1
+      },
+      "product": {
+        "copper_plate": 1
+      },
+      "facility": "冶炼设备",
+      "time": 1,
+      "additional_mode": 3
+    },
+    {
+      "material": {
+        "silicium_ore": 2
+      },
+      "product": {
+        "silicium_single_crystal": 1
+      },
+      "facility": "冶炼设备",
+      "time": 2,
+      "additional_mode": 3
+    },
+    {
+      "material": {
+        "titanium_ore": 2
+      },
+      "product": {
+        "titanium_plate": 1
+      },
+      "facility": "冶炼设备",
+      "time": 2,
+      "additional_mode": 3
+    },
+    {
+      "material": {
+        "stone_ore": 1
+      },
+      "product": {
+        "stone_brick": 1
+      },
+      "facility": "冶炼设备",
+      "time": 1,
+      "additional_mode": 3
+    },
+    {
+      "material": {
+        "coal_ore": 2
+      },
+      "product": {
+        "graphite": 1
+      },
+      "facility": "冶炼设备",
+      "time": 2,
+      "additional_mode": 3
+    },
+    {
+      "material": {
+        "refined_oil": 1,
+        "hydrogen": 2
+      },
+      "product": {
+        "graphite": 1,
+        "hydrogen": 3
+      },
+      "facility": "精炼设备",
+      "time": 4,
+      "additional_mode": 2
+    },
+    {
+      "material": {
+        "stone_ore": 2
+      },
+      "product": {
+        "glass": 1
+      },
+      "facility": "冶炼设备",
+      "time": 2,
+      "additional_mode": 3
+    },
+    {
+      "material": {
+        "iron_ore": 1
+      },
+      "product": {
+        "magnet": 1
+      },
+      "facility": "冶炼设备",
+      "time": 1.5,
+      "additional_mode": 3
+    },
+    {
+      "material": {
+        "diamond_ore": 1
+      },
+      "product": {
+        "diamond": 2
+      },
+      "facility": "冶炼设备",
+      "time": 1.5,
+      "additional_mode": 3
+    },
+    {
+      "material": {
+        "graphite": 1
+      },
+      "product": {
+        "diamond": 1
+      },
+      "facility": "冶炼设备",
+      "time": 2,
+      "additional_mode": 3
+    },
+    {
+      "material": {
+        "fractal_silica": 1
+      },
+      "product": {
+        "silicium_high_purity": 2
+      },
+      "facility": "production_platform",
+      "time": 1.5,
+      "additional_mode": 3
+    },
+    {
+      "material": {
+        "silicium_single_crystal": 1
+      },
+      "product": {
+        "silicium_high_purity": 1
+      },
+      "facility": "冶炼设备",
+      "time": 2,
+      "additional_mode": 3
+    },
+    {
+      "material": {
+        "iron_plate": 3
+      },
+      "product": {
+        "steel_plate": 1
+      },
+      "facility": "冶炼设备",
+      "time": 3,
+      "additional_mode": 3
+    },
+    {
+      "material": {
+        "sulphuric_acid": 8,
+        "titanium_plate": 4,
+        "steel_plate": 4
+      },
+      "product": {
+        "titanium_alloy": 4
+      },
+      "facility": "冶炼设备",
+      "time": 12,
+      "additional_mode": 3
+    },
+    {
+      "material": {
+        "oil": 2
+      },
+      "product": {
+        "refined_oil": 2,
+        "hydrogen": 1
+      },
+      "facility": "精炼设备",
+      "time": 4,
+      "additional_mode": 3
+    },
+    {
+      "material": {
+        "refined_oil": 2,
+        "graphite": 1
+      },
+      "product": {
+        "plastic": 1
+      },
+      "facility": "化工设备",
+      "time": 3,
+      "additional_mode": 3
+    },
+    {
+      "material": {
+        "sulphuric_acid": 1,
+        "graphite": 3
+      },
+      "product": {
+        "graphene": 2
+      },
+      "facility": "化工设备",
+      "time": 3,
+      "additional_mode": 3
+    },
+    {
+      "material": {
+        "gas_hydrate": 2
+      },
+      "product": {
+        "graphene": 2,
+        "hydrogen": 1
+      },
+      "facility": "化工设备",
+      "time": 2,
+      "additional_mode": 3
+    },
+    {
+      "material": {
+        "titanium_plate": 1,
+        "graphene": 3
+      },
+      "product": {
+        "nanotube": 2
+      },
+      "facility": "化工设备",
+      "time": 4,
+      "additional_mode": 3
+    },
+    {
+      "material": {
+        "bamboo_crystal": 6
+      },
+      "product": {
+        "nanotube": 2
+      },
+      "facility": "化工设备",
+      "time": 4,
+      "additional_mode": 3
+    },
+    {
+      "material": {
+        "iron_plate": 1
+      },
+      "product": {
+        "gear_wheel": 1
+      },
+      "facility": "production_platform",
+      "time": 1,
+      "additional_mode": 3
+    },
+    {
+      "material": {
+        "glass": 3
+      },
+      "product": {
+        "prism": 2
+      },
+      "facility": "production_platform",
+      "time": 2,
+      "additional_mode": 3
+    },
+    {
+      "material": {
+        "iron_plate": 2,
+        "copper_plate": 1
+      },
+      "product": {
+        "circuit_board": 2
+      },
+      "facility": "production_platform",
+      "time": 1,
+      "additional_mode": 3
+    },
+    {
+      "material": {
+        "magnet": 2,
+        "copper_plate": 1
+      },
+      "product": {
+        "magnetism_wire": 2
+      },
+      "facility": "production_platform",
+      "time": 1,
+      "additional_mode": 3
+    },
+    {
+      "material": {
+        "silicium_single_crystal": 2,
+        "copper_plate": 1
+      },
+      "product": {
+        "micro_component": 1
+      },
+      "facility": "production_platform",
+      "time": 2,
+      "additional_mode": 3
+    },
+    {
+      "material": {
+        "titanium_plate": 3,
+        "crystal_rubber": 1
+      },
+      "product": {
+        "titan_crystal": 1
+      },
+      "facility": "production_platform",
+      "time": 4,
+      "additional_mode": 3
+    },
+    {
+      "material": {
+        "magnetism_wire": 4,
+        "prism": 2
+      },
+      "product": {
+        "plasma_generator": 1
+      },
+      "facility": "production_platform",
+      "time": 2,
+      "additional_mode": 3
+    },
+    {
+      "material": {
+        "magnetism_wire": 1,
+        "iron_plate": 2,
+        "gear_wheel": 1
+      },
+      "product": {
+        "electric_motor": 1
+      },
+      "facility": "production_platform",
+      "time": 2,
+      "additional_mode": 3
+    },
+    {
+      "material": {
+        "magnetism_wire": 2,
+        "electric_motor": 2
+      },
+      "product": {
+        "mag_turbine": 1
+      },
+      "facility": "production_platform",
+      "time": 2,
+      "additional_mode": 3
+    },
+    {
+      "material": {
+        "circuit_board": 2,
+        "micro_component": 2
+      },
+      "product": {
+        "cpu": 1
+      },
+      "facility": "production_platform",
+      "time": 3,
+      "additional_mode": 3
+    },
+    {
+      "material": {
+        "nanotube": 2,
+        "silicium_high_purity": 2,
+        "plastic": 1
+      },
+      "product": {
+        "particle_wide_band": 1
+      },
+      "facility": "production_platform",
+      "time": 8,
+      "additional_mode": 3
+    },
+    {
+      "material": {
+        "nanotube": 4,
+        "silicium_single_crystal": 1,
+        "titanium_alloy": 1
+      },
+      "product": {
+        "frame_material": 1
+      },
+      "facility": "production_platform",
+      "time": 6,
+      "additional_mode": 3
+    },
+    {
+      "material": {
+        "circuit_board": 1,
+        "prism": 2
+      },
+      "product": {
+        "photo_shifter": 1
+      },
+      "facility": "production_platform",
+      "time": 3,
+      "additional_mode": 3
+    },
+    {
+      "material": {
+        "circuit_board": 1,
+        "grating_ore": 1
+      },
+      "product": {
+        "photo_shifter": 1
+      },
+      "facility": "production_platform",
+      "time": 3,
+      "additional_mode": 3
+    },
+    {
+      "material": {
+        "mag_turbine": 2,
+        "copper_plate": 2,
+        "graphene": 2
+      },
+      "product": {
+        "partical_capacitor": 1
+      },
+      "facility": "production_platform",
+      "time": 4,
+      "additional_mode": 3
+    },
+    {
+      "material": {
+        "mono_mag_ore": 10,
+        "copper_plate": 2
+      },
+      "product": {
+        "partical_capacitor": 1
+      },
+      "facility": "production_platform",
+      "time": 4,
+      "additional_mode": 3
+    },
+    {
+      "material": {
+        "mag_turbine": 2,
+        "magnet": 3,
+        "graphite": 1
+      },
+      "product": {
+        "hyper_magnetism_ring": 1
+      },
+      "facility": "production_platform",
+      "time": 3,
+      "additional_mode": 3
+    },
+    {
+      "material": {
+        "diamond": 4,
+        "strange_matter_generator": 1
+      },
+      "product": {
+        "gravity_lens": 1
+      },
+      "facility": "production_platform",
+      "time": 6,
+      "additional_mode": 3
+    },
+    {
+      "material": {
+        "glass": 2,
+        "titanium_plate": 2,
+        "water": 2
+      },
+      "product": {
+        "titan_glass": 2
+      },
+      "facility": "production_platform",
+      "time": 5,
+      "additional_mode": 3
+    },
+    {
+      "material": {
+        "titan_crystal": 1,
+        "graphene": 2,
+        "hydrogen": 12
+      },
+      "product": {
+        "casimir_crystal": 1
+      },
+      "facility": "production_platform",
+      "time": 4,
+      "additional_mode": 3
+    },
+    {
+      "material": {
+        "grating_ore": 8,
+        "graphene": 2,
+        "hydrogen": 12
+      },
+      "product": {
+        "casimir_crystal": 1
+      },
+      "facility": "production_platform",
+      "time": 4,
+      "additional_mode": 3
+    },
+    {
+      "material": {
+        "casimir_crystal": 1,
+        "titan_glass": 2
+      },
+      "product": {
+        "plane_filter": 1
+      },
+      "facility": "production_platform",
+      "time": 12,
+      "additional_mode": 3
+    },
+    {
+      "material": {
+        "cpu": 2,
+        "plane_filter": 2
+      },
+      "product": {
+        "quantum_processor": 1
+      },
+      "facility": "production_platform",
+      "time": 6,
+      "additional_mode": 3
+    },
+    {
+      "material": {
+        "cpu": 1,
+        "partical_capacitor": 1
+      },
+      "product": {
+        "fusion_capacitor": 1
+      },
+      "facility": "production_platform",
+      "time": 20,
+      "additional_mode": 3
+    },
+    {
+      "material": {
+        "iron_plate": 2,
+        "partical_capacitor": 2,
+        "deuterium": 10
+      },
+      "product": {
+        "strange_matter_generator": 1
+      },
+      "facility": "hadron_collider",
+      "time": 8,
+      "additional_mode": 3
+    },
+    {
+      "material": {
+        "coal_ore": 1
+      },
+      "product": {
+        "accelerator_1": 1
+      },
+      "facility": "production_platform",
+      "time": 0.5,
+      "additional_mode": 3
+    },
+    {
+      "material": {
+        "diamond": 1,
+        "accelerator_1": 2
+      },
+      "product": {
+        "accelerator_2": 1
+      },
+      "facility": "production_platform",
+      "time": 1,
+      "additional_mode": 3
+    },
+    {
+      "material": {
+        "nanotube": 1,
+        "accelerator_2": 2
+      },
+      "product": {
+        "accelerator_3": 1
+      },
+      "facility": "production_platform",
+      "time": 2,
+      "additional_mode": 3
+    },
+    {
+      "material": {
+        "titanium_plate": 1,
+        "hydrogen": 10
+      },
+      "product": {
+        "hydrogen_energy_fuel": 2
+      },
+      "facility": "production_platform",
+      "time": 6,
+      "additional_mode": 3
+    },
+    {
+      "material": {
+        "titanium_alloy": 1,
+        "deuterium": 20,
+        "hyper_magnetism_ring": 1
+      },
+      "product": {
+        "deuterium_energy_fuel": 2
+      },
+      "facility": "production_platform",
+      "time": 12,
+      "additional_mode": 3
+    },
+    {
+      "material": {
+        "titanium_alloy": 1,
+        "hydrogen": 12,
+        "anti_matter": 12,
+        "fusion_capacitor": 1
+      },
+      "product": {
+        "antimatter_energy_fuel": 2
+      },
+      "facility": "production_platform",
+      "time": 24,
+      "additional_mode": 2
+    },
+    {
+      "material": {
+        "gravity_lens": 1
+      },
+      "product": {
+        "space_warper": 1
+      },
+      "facility": "production_platform",
+      "time": 10,
+      "additional_mode": 3
+    },
+    {
+      "material": {
+        "g_matrix": 1
+      },
+      "product": {
+        "space_warper": 8
+      },
+      "facility": "production_platform",
+      "time": 10,
+      "additional_mode": 3
+    },
+    {
+      "material": {
+        "graphene": 1,
+        "photo_shifter": 1
+      },
+      "product": {
+        "solar_collector": 2
+      },
+      "facility": "production_platform",
+      "time": 4,
+      "additional_mode": 3
+    },
+    {
+      "material": {
+        "frame_material": 3,
+        "cpu": 3,
+        "solar_collector": 3
+      },
+      "product": {
+        "dyson_sphere_component": 1
+      },
+      "facility": "production_platform",
+      "time": 8,
+      "additional_mode": 3
+    },
+    {
+      "material": {
+        "quantum_processor": 2,
+        "deuterium_energy_fuel": 4,
+        "dyson_sphere_component": 2
+      },
+      "product": {
+        "rocket": 1
+      },
+      "facility": "production_platform",
+      "time": 6,
+      "additional_mode": 3
+    },
+    {
+      "material": {
+        "magnetism_wire": 1,
+        "circuit_board": 1
+      },
+      "product": {
+        "t_matrix": 1
+      },
+      "facility": "research_equipment",
+      "time": 3,
+      "additional_mode": 3
+    },
+    {
+      "material": {
+        "graphite": 2,
+        "hydrogen": 2
+      },
+      "product": {
+        "e_matrix": 1
+      },
+      "facility": "research_equipment",
+      "time": 6,
+      "additional_mode": 3
+    },
+    {
+      "material": {
+        "diamond": 1,
+        "titan_crystal": 1
+      },
+      "product": {
+        "c_matrix": 1
+      },
+      "facility": "research_equipment",
+      "time": 8,
+      "additional_mode": 3
+    },
+    {
+      "material": {
+        "cpu": 2,
+        "particle_wide_band": 1
+      },
+      "product": {
+        "i_matrix": 1
+      },
+      "facility": "research_equipment",
+      "time": 10,
+      "additional_mode": 3
+    },
+    {
+      "material": {
+        "gravity_lens": 1,
+        "quantum_processor": 1
+      },
+      "product": {
+        "g_matrix": 2
+      },
+      "facility": "research_equipment",
+      "time": 24,
+      "additional_mode": 3
+    },
+    {
+      "material": {
+        "t_matrix": 1,
+        "e_matrix": 1,
+        "c_matrix": 1,
+        "i_matrix": 1,
+        "g_matrix": 1,
+        "anti_matter": 1
+      },
+      "product": {
+        "u_matrix": 1
+      },
+      "facility": "research_equipment",
+      "time": 15,
+      "additional_mode": 3
+    },
+    {
+      "material": {
+        "steel_plate": 2,
+        "copper_plate": 3
+      },
+      "product": {
+        "fuel_thruster": 1
+      },
+      "facility": "production_platform",
+      "time": 4,
+      "additional_mode": 3
+    },
+    {
+      "material": {
+        "titanium_alloy": 5,
+        "mag_turbine": 5
+      },
+      "product": {
+        "ion_thruster": 1
+      },
+      "facility": "production_platform",
+      "time": 6,
+      "additional_mode": 3
+    },
+    {
+      "material": {
+        "iron_plate": 5,
+        "cpu": 2,
+        "fuel_thruster": 2
+      },
+      "product": {
+        "logistic_drone": 1
+      },
+      "facility": "production_platform",
+      "time": 4,
+      "additional_mode": 2
+    },
+    {
+      "material": {
+        "titanium_alloy": 10,
+        "cpu": 10,
+        "ion_thruster": 2
+      },
+      "product": {
+        "logistic_vessel": 1
+      },
+      "facility": "production_platform",
+      "time": 6,
+      "additional_mode": 2
+    },
+    {
+      "material": {
+        "steel_plate": 1,
+        "stone_brick": 3
+      },
+      "product": {
+        "terrain_tool": 1
+      },
+      "facility": "production_platform",
+      "time": 1,
+      "additional_mode": 3
+    },
+    {
+      "material": {
+        "iron_plate": 2,
+        "magnetism_wire": 1
+      },
+      "product": {
+        "tesla_coil": 1
+      },
+      "facility": "production_platform",
+      "time": 1,
+      "additional_mode": 3
+    },
+    {
+      "material": {
+        "tesla_coil": 1,
+        "plasma_generator": 3
+      },
+      "product": {
+        "charging_pole": 1
+      },
+      "facility": "production_platform",
+      "time": 3,
+      "additional_mode": 2
+    },
+    {
+      "material": {
+        "charging_pole": 1,
+        "hyper_magnetism_ring": 10,
+        "frame_material": 2
+      },
+      "product": {
+        "orbital_substation": 1
+      },
+      "facility": "production_platform",
+      "time": 5,
+      "additional_mode": 2
+    },
+    {
+      "material": {
+        "iron_plate": 6,
+        "gear_wheel": 1,
+        "magnetism_wire": 3
+      },
+      "product": {
+        "wind_turbine": 1
+      },
+      "facility": "production_platform",
+      "time": 4,
+      "additional_mode": 3
+    },
+    {
+      "material": {
+        "iron_plate": 10,
+        "stone_brick": 4,
+        "gear_wheel": 4,
+        "magnetism_wire": 4
+      },
+      "product": {
+        "fuel_plant": 1
+      },
+      "facility": "production_platform",
+      "time": 5,
+      "additional_mode": 3
+    },
+    {
+      "material": {
+        "silicium_single_crystal": 10,
+        "copper_plate": 10,
+        "circuit_board": 5
+      },
+      "product": {
+        "solar_panel": 1
+      },
+      "facility": "production_platform",
+      "time": 6,
+      "additional_mode": 3
+    },
+    {
+      "material": {
+        "iron_plate": 6,
+        "hyper_magnetism_ring": 1,
+        "silicium_high_purity": 6
+      },
+      "product": {
+        "accumulator": 1
+      },
+      "facility": "production_platform",
+      "time": 5,
+      "additional_mode": 3
+    },
+    {
+      "material": {
+        "accumulator": 1
+      },
+      "product": {
+        "accumulator_full": 1
+      },
+      "facility": "充电设备",
+      "time": 300,
+      "additional_mode": 0
+    },
+    {
+      "material": {
+        "steel_plate": 15,
+        "hyper_magnetism_ring": 1,
+        "copper_plate": 20,
+        "photo_shifter": 4
+      },
+      "product": {
+        "geothermal_power_station": 1
+      },
+      "facility": "production_platform",
+      "time": 6,
+      "additional_mode": 3
+    },
+    {
+      "material": {
+        "titanium_alloy": 12,
+        "hyper_magnetism_ring": 10,
+        "nanotube": 8,
+        "cpu": 4
+      },
+      "product": {
+        "fusion_power_station": 1
+      },
+      "facility": "production_platform",
+      "time": 10,
+      "additional_mode": 3
+    },
+    {
+      "material": {
+        "steel_plate": 40,
+        "titanium_alloy": 40,
+        "cpu": 40,
+        "partical_capacitor": 8
+      },
+      "product": {
+        "energy_exchanger": 1
+      },
+      "facility": "production_platform",
+      "time": 15,
+      "additional_mode": 3
+    },
+    {
+      "material": {
+        "steel_plate": 20,
+        "silicium_single_crystal": 20,
+        "cpu": 5,
+        "photo_shifter": 10,
+        "hyper_magnetism_ring": 20
+      },
+      "product": {
+        "ray_receiver": 1
+      },
+      "facility": "production_platform",
+      "time": 8,
+      "additional_mode": 3
+    },
+    {
+      "material": {
+        "titanium_alloy": 20,
+        "frame_material": 20,
+        "fusion_capacitor": 10,
+        "quantum_processor": 10
+      },
+      "product": {
+        "fusion_reactor": 1
+      },
+      "facility": "production_platform",
+      "time": 30,
+      "additional_mode": 3
+    },
+    {
+      "material": {
+        "iron_plate": 2,
+        "gear_wheel": 1
+      },
+      "product": {
+        "belt_1": 3
+      },
+      "facility": "production_platform",
+      "time": 1,
+      "additional_mode": 3
+    },
+    {
+      "material": {
+        "belt_1": 3,
+        "mag_turbine": 1
+      },
+      "product": {
+        "belt_2": 3
+      },
+      "facility": "production_platform",
+      "time": 1,
+      "additional_mode": 2
+    },
+    {
+      "material": {
+        "belt_2": 3,
+        "hyper_magnetism_ring": 1,
+        "graphene": 1
+      },
+      "product": {
+        "belt_3": 3
+      },
+      "facility": "production_platform",
+      "time": 1,
+      "additional_mode": 2
+    },
+    {
+      "material": {
+        "iron_plate": 3,
+        "gear_wheel": 2,
+        "circuit_board": 1
+      },
+      "product": {
+        "splitter_4dir": 1
+      },
+      "facility": "production_platform",
+      "time": 2,
+      "additional_mode": 3
+    },
+    {
+      "material": {
+        "steel_plate": 3,
+        "hyper_magnetism_ring": 1,
+        "gear_wheel": 4,
+        "cpu": 2
+      },
+      "product": {
+        "piler": 1
+      },
+      "facility": "production_platform",
+      "time": 4,
+      "additional_mode": 3
+    },
+    {
+      "material": {
+        "iron_plate": 3,
+        "circuit_board": 2,
+        "gear_wheel": 2,
+        "glass": 1
+      },
+      "product": {
+        "monitor": 1
+      },
+      "facility": "production_platform",
+      "time": 2,
+      "additional_mode": 3
+    },
+    {
+      "material": {
+        "iron_plate": 4,
+        "stone_brick": 4
+      },
+      "product": {
+        "storage_1": 1
+      },
+      "facility": "production_platform",
+      "time": 2,
+      "additional_mode": 3
+    },
+    {
+      "material": {
+        "steel_plate": 8,
+        "stone_brick": 8
+      },
+      "product": {
+        "storage_2": 1
+      },
+      "facility": "production_platform",
+      "time": 4,
+      "additional_mode": 3
+    },
+    {
+      "material": {
+        "iron_plate": 8,
+        "stone_brick": 4,
+        "glass": 4
+      },
+      "product": {
+        "storage_tank": 1
+      },
+      "facility": "production_platform",
+      "time": 2,
+      "additional_mode": 3
+    },
+    {
+      "material": {
+        "titanium_plate": 40,
+        "steel_plate": 40,
+        "cpu": 40,
+        "partical_capacitor": 20
+      },
+      "product": {
+        "logistic_station": 1
+      },
+      "facility": "production_platform",
+      "time": 20,
+      "additional_mode": 3
+    },
+    {
+      "material": {
+        "titanium_alloy": 40,
+        "partical_capacitor": 20,
+        "logistic_station": 1
+      },
+      "product": {
+        "interstellar_logistic_station": 1
+      },
+      "facility": "production_platform",
+      "time": 30,
+      "additional_mode": 2
+    },
+    {
+      "material": {
+        "hyper_magnetism_ring": 50,
+        "ion_thruster": 20,
+        "accumulator_full": 20,
+        "interstellar_logistic_station": 1
+      },
+      "product": {
+        "orbital_collector": 1
+      },
+      "facility": "production_platform",
+      "time": 30,
+      "additional_mode": 2
+    },
+    {
+      "material": {
+        "iron_plate": 1,
+        "circuit_board": 1
+      },
+      "product": {
+        "inserter_1": 1
+      },
+      "facility": "production_platform",
+      "time": 1,
+      "additional_mode": 3
+    },
+    {
+      "material": {
+        "inserter_1": 2,
+        "electric_motor": 1
+      },
+      "product": {
+        "inserter_2": 2
+      },
+      "facility": "production_platform",
+      "time": 1,
+      "additional_mode": 2
+    },
+    {
+      "material": {
+        "inserter_2": 2,
+        "mag_turbine": 1
+      },
+      "product": {
+        "inserter_3": 2
+      },
+      "facility": "production_platform",
+      "time": 1,
+      "additional_mode": 2
+    },
+    {
+      "material": {
+        "iron_plate": 4,
+        "circuit_board": 2,
+        "magnetism_wire": 2,
+        "gear_wheel": 2
+      },
+      "product": {
+        "mining_drill": 1
+      },
+      "facility": "production_platform",
+      "time": 3,
+      "additional_mode": 3
+    },
+    {
+      "material": {
+        "titanium_alloy": 20,
+        "frame_material": 10,
+        "hyper_magnetism_ring": 10,
+        "quantum_processor": 2,
+        "grating_ore": 40
+      },
+      "product": {
+        "mining_drill_mk2": 1
+      },
+      "facility": "production_platform",
+      "time": 20,
+      "additional_mode": 3
+    },
+    {
+      "material": {
+        "iron_plate": 8,
+        "circuit_board": 2,
+        "electric_motor": 4,
+        "stone_brick": 4
+      },
+      "product": {
+        "water_pump": 1
+      },
+      "facility": "production_platform",
+      "time": 4,
+      "additional_mode": 3
+    },
+    {
+      "material": {
+        "steel_plate": 12,
+        "circuit_board": 6,
+        "stone_brick": 12,
+        "plasma_generator": 4
+      },
+      "product": {
+        "oil_extractor": 1
+      },
+      "facility": "production_platform",
+      "time": 8,
+      "additional_mode": 3
+    },
+    {
+      "material": {
+        "steel_plate": 10,
+        "circuit_board": 6,
+        "stone_brick": 10,
+        "plasma_generator": 6
+      },
+      "product": {
+        "oil_refinery": 1
+      },
+      "facility": "production_platform",
+      "time": 6,
+      "additional_mode": 3
+    },
+    {
+      "material": {
+        "steel_plate": 8,
+        "cpu": 1,
+        "stone_brick": 4,
+        "glass": 4
+      },
+      "product": {
+        "fractionator": 1
+      },
+      "facility": "production_platform",
+      "time": 3,
+      "additional_mode": 3
+    },
+    {
+      "material": {
+        "titanium_alloy": 20,
+        "cpu": 8,
+        "frame_material": 20,
+        "hyper_magnetism_ring": 50,
+        "graphene": 10
+      },
+      "product": {
+        "hadron_collider": 1
+      },
+      "facility": "production_platform",
+      "time": 15,
+      "additional_mode": 3
+    },
+    {
+      "material": {
+        "steel_plate": 20,
+        "cpu": 5,
+        "gear_wheel": 20,
+        "hyper_magnetism_ring": 10
+      },
+      "product": {
+        "em_rail_ejector": 1
+      },
+      "facility": "production_platform",
+      "time": 6,
+      "additional_mode": 3
+    },
+    {
+      "material": {
+        "titanium_alloy": 80,
+        "frame_material": 30,
+        "gravity_lens": 20,
+        "quantum_processor": 10
+      },
+      "product": {
+        "vertical_launching_silo": 1
+      },
+      "facility": "production_platform",
+      "time": 30,
+      "additional_mode": 3
+    },
+    {
+      "material": {
+        "iron_plate": 4,
+        "gear_wheel": 8,
+        "circuit_board": 4
+      },
+      "product": {
+        "assembler_1": 1
+      },
+      "facility": "production_platform",
+      "time": 0.5,
+      "additional_mode": 3
+    },
+    {
+      "material": {
+        "cpu": 4,
+        "graphene": 8,
+        "assembler_1": 1
+      },
+      "product": {
+        "assembler_2": 1
+      },
+      "facility": "production_platform",
+      "time": 3,
+      "additional_mode": 2
+    },
+    {
+      "material": {
+        "quantum_processor": 2,
+        "particle_wide_band": 8,
+        "assembler_2": 1
+      },
+      "product": {
+        "assembler_3": 1
+      },
+      "facility": "production_platform",
+      "time": 4,
+      "additional_mode": 2
+    },
+    {
+      "material": {
+        "iron_plate": 4,
+        "circuit_board": 4,
+        "magnetism_wire": 2,
+        "stone_brick": 2
+      },
+      "product": {
+        "smelter": 1
+      },
+      "facility": "production_platform",
+      "time": 3,
+      "additional_mode": 3
+    },
+    {
+      "material": {
+        "smelter": 1,
+        "frame_material": 5,
+        "plane_filter": 4,
+        "mono_mag_ore": 15
+      },
+      "product": {
+        "smelter_2": 1
+      },
+      "facility": "production_platform",
+      "time": 5,
+      "additional_mode": 2
+    },
+    {
+      "material": {
+        "steel_plate": 4,
+        "plasma_generator": 2,
+        "circuit_board": 2,
+        "micro_component": 2
+      },
+      "product": {
+        "spray_coater": 1
+      },
+      "facility": "production_platform",
+      "time": 3,
+      "additional_mode": 3
+    },
+    {
+      "material": {
+        "steel_plate": 8,
+        "stone_brick": 8,
+        "circuit_board": 2,
+        "glass": 8
+      },
+      "product": {
+        "chemical_plant": 1
+      },
+      "facility": "production_platform",
+      "time": 5,
+      "additional_mode": 3
+    },
+    {
+      "material": {
+        "iron_plate": 8,
+        "glass": 4,
+        "circuit_board": 4,
+        "magnetism_wire": 4
+      },
+      "product": {
+        "lab": 1
+      },
+      "facility": "production_platform",
+      "time": 3,
+      "additional_mode": 3
+    },
+    {
+      "material": {
+        "refined_oil": 2,
+        "hydrogen": 1,
+        "coal_ore": 1
+      },
+      "product": {
+        "refined_oil": 3
+      },
+      "facility": "精炼设备",
+      "time": 4,
+      "additional_mode": 2
+    },
+    {
+      "material": {
+        "iron_plate": 2,
+        "cpu": 1,
+        "mag_turbine": 1
+      },
+      "product": {
+        "delivery_drone": 1
+      },
+      "facility": "production_platform",
+      "time": 2,
+      "additional_mode": 3
+    },
+    {
+      "material": {
+        "iron_plate": 8,
+        "cpu": 4,
+        "plasma_generator": 4
+      },
+      "product": {
+        "delivery_machine": 1
+      },
+      "facility": "production_platform",
+      "time": 8,
+      "additional_mode": 3
+    },
+    {
+      "material": {
+        "chemical_plant": 1,
+        "titan_glass": 10,
+        "strange_matter_generator": 3,
+        "quantum_processor": 3
+      },
+      "product": {
+        "chemical_plant_2": 1
+      },
+      "facility": "production_platform",
+      "time": 10,
+      "additional_mode": 2
+    }
+  ],
+  "proliferator_data": {
+    "不适用增产剂": {
+      "喷涂次数": 2,
+      "单次喷涂最高增产点数": 0,
+      "增产剂名称": "不使用增产剂"
+    },
+    "增产剂MK.Ⅰ": {
+      "喷涂次数": 12,
+      "单次喷涂最高增产点数": 1,
+      "增产剂名称": "增产剂MK.Ⅰ"
+    },
+    "增产剂MK.Ⅱ": {
+      "喷涂次数": 24,
+      "单次喷涂最高增产点数": 2,
+      "增产剂名称": "增产剂MK.Ⅱ"
+    },
+    "增产剂MK.Ⅲ": {
+      "喷涂次数": 60,
+      "单次喷涂最高增产点数": 4,
+      "增产剂名称": "增产剂MK.Ⅲ"
+    }
+  },
+  "proliferate_effect": [
+    {
+      "增产效果": 1.0,
+      "加速效果": 1.0,
+      "耗电倍率": 1.0
+    },
+    {
+      "增产效果": 1.125,
+      "加速效果": 1.25,
+      "耗电倍率": 1.3
+    },
+    {
+      "增产效果": 1.2,
+      "加速效果": 1.5,
+      "耗电倍率": 1.7
+    },
+    {
+      "增产效果": 1.225,
+      "加速效果": 1.75,
+      "耗电倍率": 2.1
+    },
+    {
+      "增产效果": 1.25,
+      "加速效果": 2.0,
+      "耗电倍率": 2.5
+    },
+    {
+      "增产效果": 1.275,
+      "加速效果": 2.25,
+      "耗电倍率": 2.9
+    },
+    {
+      "增产效果": 1.3,
+      "加速效果": 2.5,
+      "耗电倍率": 3.3
+    },
+    {
+      "增产效果": 1.325,
+      "加速效果": 2.75,
+      "耗电倍率": 3.7
+    },
+    {
+      "增产效果": 1.35,
+      "加速效果": 3.0,
+      "耗电倍率": 4.1
+    },
+    {
+      "增产效果": 1.375,
+      "加速效果": 3.25,
+      "耗电倍率": 4.5
+    },
+    {
+      "增产效果": 1.4,
+      "加速效果": 3.5,
+      "耗电倍率": 4.9
+    }
+  ],
+  "factory_data": {
+    "轻型工业机甲": [
+      {
+        "名称": "伊卡洛斯",
+        "耗能": 0.08,
+        "倍率": 1,
+        "占地": 0.01
+      }
+    ],
+    "采矿设备": [
+      {
+        "名称": "mining_drill",
+        "耗能": 0.42,
+        "倍率": 0.5,
+        "占地": 15
+      },
+      {
+        "名称": "mining_drill_mk2",
+        "耗能": 2.94,
+        "倍率": 1,
+        "占地": 25
+      }
+    ],
+    "抽水设备": [
+      {
+        "名称": "water_pump",
+        "耗能": 0.3,
+        "倍率": 1,
+        "占地": 12
+      }
+    ],
+    "抽油设备": [
+      {
+        "名称": "oil_extractor",
+        "耗能": 0.3,
+        "倍率": 1,
+        "占地": 50
+      }
+    ],
+    "orbital_collector": [
+      {
+        "名称": "orbital_collector",
+        "耗能": 30,
+        "倍率": 8,
+        "占地": 0.01
+      }
+    ],
+    "ray_receiver": [
+      {
+        "名称": "ray_receiver",
+        "耗能": 0,
+        "倍率": 1,
+        "占地": 54.82
+      }
+    ],
+    "冶炼设备": [
+      {
+        "名称": "smelter",
+        "耗能": 0.36,
+        "倍率": 1,
+        "占地": 5.76
+      },
+      {
+        "名称": "smelter_2",
+        "耗能": 1.44,
+        "倍率": 2,
+        "占地": 5.76
+      }
+    ],
+    "production_platform": [
+      {
+        "名称": "assembler_1",
+        "耗能": 0.27,
+        "倍率": 0.75,
+        "占地": 10.24
+      },
+      {
+        "名称": "assembler_2",
+        "耗能": 0.54,
+        "倍率": 1,
+        "占地": 10.24
+      },
+      {
+        "名称": "assembler_3",
+        "耗能": 1.08,
+        "倍率": 1.5,
+        "占地": 10.24
+      }
+    ],
+    "精炼设备": [
+      {
+        "名称": "oil_refinery",
+        "耗能": 0.96,
+        "倍率": 1,
+        "占地": 18
+      }
+    ],
+    "化工设备": [
+      {
+        "名称": "chemical_plant",
+        "耗能": 0.72,
+        "倍率": 1,
+        "占地": 23.76
+      },
+      {
+        "名称": "chemical_plant_2",
+        "耗能": 2.16,
+        "倍率": 2,
+        "占地": 23.76
+      }
+    ],
+    "分馏设备": [
+      {
+        "名称": "fractionator",
+        "耗能": 0.72,
+        "倍率": 1,
+        "占地": 12.96
+      }
+    ],
+    "hadron_collider": [
+      {
+        "名称": "hadron_collider",
+        "耗能": 12,
+        "倍率": 1,
+        "占地": 45.12
+      }
+    ],
+    "research_equipment": [
+      {
+        "名称": "lab",
+        "耗能": 0.48,
+        "倍率": 1,
+        "占地": 20.25
+      }
+    ],
+    "充电设备": [
+      {
+        "名称": "energy_exchanger",
+        "耗能": 45,
+        "倍率": 50,
+        "占地": 64
+      },
+      {
+        "名称": "accumulator",
+        "耗能": 0.9,
+        "倍率": 1,
+        "占地": 4
+      }
+    ]
+  }
+}

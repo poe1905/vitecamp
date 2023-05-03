@@ -13,6 +13,9 @@ dependencies:
   element-plus:
     specifier: ^2.0.1
     version: 2.2.12(vue@3.2.37)
+  javascript-lp-solver:
+    specifier: ^0.4.24
+    version: 0.4.24
   nprogress:
     specifier: ^0.2.0
     version: 0.2.0
@@ -3137,6 +3140,10 @@ packages:
   /isexe@2.0.0:
     resolution: {integrity: sha512-RHxMLp9lnKHGHRng9QFhRCMbYAcVpn69smSGcq3f36xjgVVWThj4qqLbTLlq7Ssj8B+fIQ1EuCEGI2lKsyQeIw==}
     dev: true
+
+  /javascript-lp-solver@0.4.24:
+    resolution: {integrity: sha512-5edoDKnMrt/u3M6GnZKDDIPxOyFOg+WrwDv8mjNiMC2DePhy2H9/FFQgf4ggywaXT1utvkxusJcjQUER72cZmA==}
+    dev: false
 
   /jiti@1.14.0:
     resolution: {integrity: sha512-4IwstlaKQc9vCTC+qUXLM1hajy2ImiL9KnLvVYiaHOtS/v3wRjhLlGl121AmgDgx/O43uKmxownJghS5XMya2A==}

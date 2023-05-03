@@ -70,31 +70,73 @@ const config = defineStore({
       miningSprayingOptions: [
         {
           key: '0',
+          name: '不使用',
         },
         {
           key: '1',
+          name: 'accelerator_1',
         },
         {
           key: '2',
+          name: 'accelerator_2',
         },
         {
           key: '3',
+          name: 'accelerator_3',
         },
       ],
       defaultInc: '0', // 默认增产模式 0 不适用增产剂 1 使用增产， 2 使用加速
       miningIncOptions: [
-        {
-          key: '0',
-          name: '不使用增产剂',
-        },
-        {
-          key: '1',
-          name: '使用增产模式',
-        },
-        {
-          key: '2',
-          name: '使用加速模式',
-        },
+        [
+          {
+            key: '0',
+            name: '不使用',
+          },
+        ],
+        [
+          {
+            key: '0',
+            name: '不使用',
+          },
+          {
+            key: '1',
+            name: ' 增产模式',
+          },
+        ],
+        [
+          {
+            key: '0',
+            name: '不使用',
+          },
+          {
+            key: '2',
+            name: '加速模式',
+          },
+        ],
+        [
+          {
+            key: '0',
+            name: '不使用',
+          },
+          {
+            key: '1',
+            name: ' 增产模式',
+          },
+          {
+            key: '2',
+            name: '加速模式',
+          },
+        ],
+        [
+          {
+            key: '0',
+            name: '不使用',
+          },
+          {
+            key: '1',
+            name: '接收站透镜喷涂',
+          },
+        ],
       ],
     };
   },

@@ -1,6 +1,6 @@
 {
   "accelerator_1": {
-    "name": "增产剂 mk.1",
+    "name": "增产剂 MK.Ⅰ",
     "key": "accelerator_1",
     "type": "goods",
     "path": {
@@ -11,7 +11,7 @@
     }
   },
   "accelerator_2": {
-    "name": "增产剂 mk.2",
+    "name": "增产剂 MK.Ⅱ",
     "key": "accelerator_2",
     "type": "goods",
     "path": {
@@ -22,7 +22,7 @@
     }
   },
   "accelerator_3": {
-    "name": "增产剂 mk.3",
+    "name": "增产剂 MK.Ⅲ",
     "key": "accelerator_3",
     "type": "goods",
     "path": {
@@ -44,7 +44,7 @@
     }
   },
   "accumulator_full": {
-    "name": "钢铁",
+    "name": "蓄电器（满）",
     "key": "accumulator_full",
     "type": "goods",
     "path": {
@@ -55,7 +55,7 @@
     }
   },
   "anti_matter": {
-    "name": "钢铁",
+    "name": "反物质",
     "key": "anti_matter",
     "type": "goods",
     "path": {
@@ -77,7 +77,7 @@
     }
   },
   "assembler_1": {
-    "name": "制造台 mk.1",
+    "name": "制造台 MK.Ⅰ",
     "key": "assembler_1",
     "type": "architecture",
     "path": {
@@ -88,7 +88,7 @@
     }
   },
   "assembler_2": {
-    "name": "制造台 mk.2",
+    "name": "制造台 MK.Ⅱ",
     "key": "assembler_2",
     "type": "architecture",
     "path": {
@@ -99,7 +99,7 @@
     }
   },
   "assembler_3": {
-    "name": "制造台 mk.3",
+    "name": "制造台 MK.Ⅲ",
     "key": "assembler_3",
     "type": "architecture",
     "path": {
@@ -110,7 +110,7 @@
     }
   },
   "bamboo_crystal": {
-    "name": "钢铁",
+    "name": "刺笋结晶",
     "key": "bamboo_crystal",
     "type": "goods",
     "path": {
@@ -143,7 +143,7 @@
     }
   },
   "belt_3": {
-    "name": "急速传送带",
+    "name": "极速传送带",
     "key": "belt_3",
     "type": "architecture",
     "path": {
@@ -165,7 +165,7 @@
     }
   },
   "casimir_crystal_lv2": {
-    "name": "钢铁",
+    "name": "卡西米尔晶体高效(配方)",
     "key": "casimir_crystal_lv2",
     "type": "goods",
     "path": {
@@ -231,7 +231,7 @@
     }
   },
   "coal_ore": {
-    "name": "钢铁",
+    "name": "煤矿",
     "key": "coal_ore",
     "type": "goods",
     "path": {
@@ -242,6 +242,17 @@
     }
   },
   "copper_ore": {
+    "name": "铜矿",
+    "key": "coal_ore",
+    "type": "goods",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-210",
+      "y": "-410"
+    }
+  },
+  "cpu": {
     "name": "处理器",
     "key": "copper_ore",
     "type": "goods",
@@ -275,7 +286,7 @@
     }
   },
   "crystal_rubber_lv0": {
-    "name": "钢铁",
+    "name": "土法炼制有机晶体",
     "key": "crystal_rubber_lv0",
     "type": "goods",
     "path": {
@@ -319,7 +330,7 @@
     }
   },
   "deuterium_energy_fuel": {
-    "name": "氚核燃料棒",
+    "name": "氘核燃料棒",
     "key": "deuterium_energy_fuel",
     "type": "goods",
     "path": {
@@ -330,7 +341,7 @@
     }
   },
   "Deuterium_extractor": {
-    "name": "钢铁",
+    "name": "亥闪能量棒-暂无",
     "key": "Deuterium_extractor",
     "type": "goods",
     "path": {
@@ -341,7 +352,7 @@
     }
   },
   "deuterium_formula": {
-    "name": "钢铁",
+    "name": "氢气转重氢配方",
     "key": "deuterium_formula",
     "type": "goods",
     "path": {
@@ -352,7 +363,7 @@
     }
   },
   "diamond_lv2": {
-    "name": "钢铁",
+    "name": "金刚石高效配方",
     "key": "diamond_lv2",
     "type": "goods",
     "path": {
@@ -374,7 +385,7 @@
     }
   },
   "diamond_ore": {
-    "name": "钢铁",
+    "name": "金伯利矿石",
     "key": "diamond_ore",
     "type": "goods",
     "path": {
@@ -429,7 +440,7 @@
     }
   },
   "fractal_silica": {
-    "name": "钢铁",
+    "name": "分形硅石",
     "key": "fractal_silica",
     "type": "goods",
     "path": {
@@ -528,7 +539,7 @@
     }
   },
   "gas_hydrate": {
-    "name": "钢铁",
+    "name": "可燃冰",
     "key": "gas_hydrate",
     "type": "goods",
     "path": {
@@ -594,7 +605,7 @@
     }
   },
   "graphene_lv2": {
-    "name": "钢铁",
+    "name": "高效石墨烯配方",
     "key": "graphene_lv2",
     "type": "goods",
     "path": {
@@ -616,7 +627,7 @@
     }
   },
   "grating_ore": {
-    "name": "钢铁",
+    "name": "光栅石",
     "key": "grating_ore",
     "type": "goods",
     "path": {
@@ -649,7 +660,7 @@
     }
   },
   "hydrogen": {
-    "name": "钢铁",
+    "name": "氢",
     "key": "hydrogen",
     "type": "goods",
     "path": {
@@ -671,7 +682,7 @@
     }
   },
   "hyper_magnetism_ring": {
-    "name": "超能磁场环",
+    "name": "超级磁场环",
     "key": "hyper_magnetism_ring",
     "type": "goods",
     "path": {
@@ -748,7 +759,7 @@
     }
   },
   "iron_ore": {
-    "name": "钢铁",
+    "name": "铁矿",
     "key": "iron_ore",
     "type": "goods",
     "path": {
@@ -803,7 +814,7 @@
     }
   },
   "logistic_vessel": {
-    "name": "星际运输机",
+    "name": "星际物流运输船",
     "key": "logistic_vessel",
     "type": "goods",
     "path": {
@@ -847,7 +858,7 @@
     }
   },
   "matrix": {
-    "name": "钢铁",
+    "name": "三角蓝色物品-暂无",
     "key": "matrix",
     "type": "goods",
     "path": {
@@ -891,7 +902,7 @@
     }
   },
   "monitor": {
-    "name": "流速检测器",
+    "name": "流速监测器",
     "key": "monitor",
     "type": "architecture",
     "path": {
@@ -902,7 +913,7 @@
     }
   },
   "mono_mag_ore": {
-    "name": "钢铁",
+    "name": "单极磁石",
     "key": "mono_mag_ore",
     "type": "goods",
     "path": {
@@ -924,7 +935,7 @@
     }
   },
   "nanotube_lv2": {
-    "name": "钢铁",
+    "name": "高效碳纳米管 (配方) ",
     "key": "nanotube_lv2",
     "type": "goods",
     "path": {
@@ -935,7 +946,7 @@
     }
   },
   "oil": {
-    "name": "钢铁",
+    "name": "原油",
     "key": "oil",
     "type": "goods",
     "path": {
@@ -979,7 +990,7 @@
     }
   },
   "orbital_substation": {
-    "name": "卫星配电塔",
+    "name": "卫星配电站",
     "key": "orbital_substation",
     "type": "architecture",
     "path": {
@@ -1001,7 +1012,7 @@
     }
   },
   "partical_capacitor_lv2": {
-    "name": "钢铁",
+    "name": "高效粒子容器(配方)",
     "key": "partical_capacitor_lv2",
     "type": "goods",
     "path": {
@@ -1023,7 +1034,7 @@
     }
   },
   "photon_capacitor_full": {
-    "name": "钢铁",
+    "name": "临界光子",
     "key": "photon_capacitor_full",
     "type": "goods",
     "path": {
@@ -1056,7 +1067,7 @@
     }
   },
   "photo_shifter_lv2": {
-    "name": "钢铁",
+    "name": "高效光子合并器(配方)",
     "key": "photo_shifter_lv2",
     "type": "goods",
     "path": {
@@ -1067,7 +1078,7 @@
     }
   },
   "piler": {
-    "name": "自动集装器",
+    "name": "自动集装机",
     "key": "piler",
     "type": "architecture",
     "path": {
@@ -1089,7 +1100,7 @@
     }
   },
   "plant_fuel": {
-    "name": "钢铁",
+    "name": "植物燃料",
     "key": "plant_fuel",
     "type": "goods",
     "path": {
@@ -1111,7 +1122,7 @@
     }
   },
   "plasma_refining": {
-    "name": "钢铁",
+    "name": "等离子精炼(配方)",
     "key": "plasma_refining",
     "type": "goods",
     "path": {
@@ -1122,7 +1133,7 @@
     }
   },
   "plastic": {
-    "name": "聚乙烯",
+    "name": "塑料",
     "key": "plastic",
     "type": "goods",
     "path": {
@@ -1166,7 +1177,7 @@
     }
   },
   "refined_oil": {
-    "name": "钢铁",
+    "name": "精炼油",
     "key": "refined_oil",
     "type": "goods",
     "path": {
@@ -1177,7 +1188,7 @@
     }
   },
   "reforming_refine": {
-    "name": "钢铁",
+    "name": "重整精炼(配方)",
     "key": "reforming_refine",
     "type": "goods",
     "path": {
@@ -1210,7 +1221,7 @@
     }
   },
   "silicium_high_purity_lv2": {
-    "name": "钢铁",
+    "name": "晶格硅高效(配方)",
     "key": "silicium_high_purity_lv2",
     "type": "goods",
     "path": {
@@ -1298,7 +1309,7 @@
     }
   },
   "space_warper_lv2": {
-    "name": "钢铁",
+    "name": "空间翘曲器高效(配方)",
     "key": "space_warper_lv2",
     "type": "goods",
     "path": {
@@ -1309,7 +1320,7 @@
     }
   },
   "splitter_4dir": {
-    "name": "四项分流器",
+    "name": "四向分流器",
     "key": "splitter_4dir",
     "type": "architecture",
     "path": {
@@ -1353,7 +1364,7 @@
     }
   },
   "stone_ore": {
-    "name": "钢铁",
+    "name": "石矿",
     "key": "stone_ore",
     "type": "goods",
     "path": {
@@ -1452,7 +1463,7 @@
     }
   },
   "titan_glass": {
-    "name": "钛玻璃",
+    "name": "钛化玻璃",
     "key": "titan_glass",
     "type": "goods",
     "path": {
@@ -1474,7 +1485,7 @@
     }
   },
   "titanium_ore": {
-    "name": "钢铁",
+    "name": "钛石",
     "key": "titanium_ore",
     "type": "goods",
     "path": {
@@ -1529,7 +1540,7 @@
     }
   },
   "water": {
-    "name": "钢铁",
+    "name": "水",
     "key": "water",
     "type": "goods",
     "path": {
@@ -1540,7 +1551,7 @@
     }
   },
   "water_pump": {
-    "name": "抽水站",
+    "name": "抽水机",
     "key": "water_pump",
     "type": "architecture",
     "path": {
@@ -1562,7 +1573,7 @@
     }
   },
   "wood": {
-    "name": "钢铁",
+    "name": "木材",
     "key": "wood",
     "type": "goods",
     "path": {
@@ -1573,7 +1584,7 @@
     }
   },
   "none": {
-    "name": "站位格",
+    "name": "占位格暂无",
     "key": "none",
     "type": "goods",
     "path": {
@@ -1584,7 +1595,7 @@
     }
   },
   "X_ray": {
-    "name": "钢铁",
+    "name": "X射线裂解",
     "key": "X_ray",
     "type": "goods",
     "path": {
@@ -1592,6 +1603,24 @@
       "height": "80",
       "x": "-1210",
       "y": "-710"
+    }
+  },
+  "goods": {
+    "name": "选择物品",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-614",
+      "y": "-1111"
+    }
+  },
+  "architecture": {
+    "name": "选择建筑",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-714",
+      "y": "-1111"
     }
   }
 }

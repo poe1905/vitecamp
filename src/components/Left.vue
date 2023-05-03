@@ -6,7 +6,7 @@
     <div class="nvmer overflow-y-auto">
       <!-- 采矿默认参数设置 -->
       <div class=" " v-if="theme.compact">
-        <h2 class="text-lg m-1 flex justify-center items-center" @click="showMiningConfig = !showMiningConfig">
+        <h2 class=" sticky bg-cyan-300 z-99 top-0 text-lg m-1 flex justify-center items-center" @click="showMiningConfig = !showMiningConfig">
           配置当前工厂的默认参数
           <div class="pt-2 ml-5">
             <i-zondicons:arrow-thick-up v-if="showMiningConfig" />
@@ -110,7 +110,7 @@
       </div>
       <!-- 工厂默认参数设置 -->
       <div class=" " v-if="theme.compact">
-        <h2 class="text-lg m-1 flex justify-center items-center" @click="showFactoryConfig = !showFactoryConfig">
+        <h2 class=" sticky top-0 text-lg   flex justify-center items-center" @click="showFactoryConfig = !showFactoryConfig">
           批量配置工厂设置
           <div class="pt-2 ml-5">
             <i-zondicons:arrow-thick-up v-if="showFactoryConfig" />
@@ -214,7 +214,7 @@ console.log('theme', theme);
 console.log('config', config.miningOptions);
 const { t, availableLocales, locale } = useI18n();
 const widthOT = computed(() => {
-  return theme.compact ? '390px' : '50px';
+  return theme.compact ? '420px' : '50px';
 });
 const restpredDefault = (type) => {
   console.log('type', type);
@@ -254,6 +254,7 @@ const showFactoryConfig = ref(false);
 }
 .nvmer {
   height: calc(100vh - 65px);
+  min-width: 323px;
 }
 .nvmer::-webkit-scrollbar {
   width: 5px;

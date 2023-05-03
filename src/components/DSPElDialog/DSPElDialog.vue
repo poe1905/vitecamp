@@ -9,17 +9,18 @@
             <ul class="flex">
               <li
                 :class="{ activate: typeNumber == key }"
-                class="cursor-pointer select-none"
+                class="cursor-pointer select-none  flex justify-center items-center"
                 v-for="key in Object.keys(lsit)"
                 :key="key"
                 @click="typeNumber = key"
               >
-                {{ t(key) }}
+                <ProductImg :imgKey="key" />
+
               </li>
             </ul>
           </menu>
-          <hr />
-          <h2 class="text-content pl-8 text-3xl font-black">{{ currentSelectedProduct }}</h2>
+          <!-- <hr /> -->
+          <!-- <h2 class="text-content pl-8 text-3xl font-black">{{ currentSelectedProduct }}</h2> -->
           <hr />
           <div class="items p-4 pr-5">
             <template v-for="type in lsit[typeNumber]" :key="type">
@@ -32,7 +33,11 @@
                   @click="
                     () => {
                       if (item.key == 'none') return;
-                      itemNumber = item.key;
+
+                      props.clickSelect({
+                        key:item.key,
+                        num: num,
+                      });
                     }
                   "
                 >
@@ -84,10 +89,7 @@ const currentSelectedProduct = computed(() => {
   return itemNumber.value === null ? '请选择目标产物 ↓' : `目标物是 : ${DSP[itemNumber.value].name}, ${num.value}/min`;
 });
 const selectProduct = () => {
-  props.clickSelect({
-    key: itemNumber.value,
-    num: num.value,
-  });
+
 };
 
 const num = ref(60);
