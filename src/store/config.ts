@@ -75,14 +75,17 @@ const config = defineStore({
         {
           key: '1',
           name: 'accelerator_1',
+          label: '增产剂MK.Ⅰ',
         },
         {
           key: '2',
           name: 'accelerator_2',
+          label: '增产剂MK.Ⅱ',
         },
         {
-          key: '3',
+          key: '4',
           name: 'accelerator_3',
+          label: '增产剂MK.Ⅲ',
         },
       ],
       defaultInc: '0', // 默认增产模式 0 不适用增产剂 1 使用增产， 2 使用加速
@@ -100,7 +103,7 @@ const config = defineStore({
           },
           {
             key: '1',
-            name: ' 增产模式',
+            name: '增产模式',
           },
         ],
         [
@@ -120,7 +123,7 @@ const config = defineStore({
           },
           {
             key: '1',
-            name: ' 增产模式',
+            name: '增产模式',
           },
           {
             key: '2',
@@ -133,10 +136,24 @@ const config = defineStore({
             name: '不使用',
           },
           {
-            key: '1',
+            key: '4',
             name: '接收站透镜喷涂',
           },
         ],
+      ],
+      IncOptions: [
+        {
+          key: '0',
+          name: '不使用',
+        },
+        {
+          key: '1',
+          name: '增产模式',
+        },
+        {
+          key: '2',
+          name: '加速模式',
+        },
       ],
     };
   },

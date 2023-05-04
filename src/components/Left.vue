@@ -6,7 +6,10 @@
     <div class="nvmer overflow-y-auto">
       <!-- 采矿默认参数设置 -->
       <div class=" " v-if="theme.compact">
-        <h2 class=" sticky bg-cyan-300 z-99 top-0 text-lg m-1 flex justify-center items-center" @click="showMiningConfig = !showMiningConfig">
+        <h2
+          class="sticky bg-cyan-300 z-99 top-0 text-lg m-1 flex justify-center items-center"
+          @click="showMiningConfig = !showMiningConfig"
+        >
           配置当前工厂的默认参数
           <div class="pt-2 ml-5">
             <i-zondicons:arrow-thick-up v-if="showMiningConfig" />
@@ -110,7 +113,10 @@
       </div>
       <!-- 工厂默认参数设置 -->
       <div class=" " v-if="theme.compact">
-        <h2 class=" sticky top-0 text-lg   flex justify-center items-center" @click="showFactoryConfig = !showFactoryConfig">
+        <h2
+          class="sticky top-0 text-lg flex justify-center items-center"
+          @click="showFactoryConfig = !showFactoryConfig"
+        >
           批量配置工厂设置
           <div class="pt-2 ml-5">
             <i-zondicons:arrow-thick-up v-if="showFactoryConfig" />
@@ -187,10 +193,10 @@
             </el-select>
           </li>
           <li class="items-center">
-            默认增产模式
+            默认增产模式 {{}}
             <el-select v-model="config.defaultInc" class="m-2" placeholder="Select" size="small">
               <el-option
-                v-for="option in config.miningIncOptions"
+                v-for="option in config.IncOptions"
                 :key="option"
                 :label="labelHandel(option)"
                 :value="option.key"
@@ -226,6 +232,9 @@ const restpredDefault = (type) => {
 };
 const labelHandel = (option) => {
   //如果设置name 属性， 则直接展示 设置的 name
+  if (option.label) {
+    return option.label;
+  }
   if (option.name) {
     return option.name;
   }
@@ -236,7 +245,13 @@ const labelHandel = (option) => {
   }
 
   // 如果key 不是数字， 则拿key去 数组里面找到相应的数据
-  return option.name ? DSP[option.name] : DSP[option.key].name;
+  if (isProxy(option)) {
+    console.log('option.value.key', DSP[option.key].name);
+
+    return DSP[option.key].name;
+  } else {
+    return DSP[option.name];
+  }
 };
 
 const showMiningConfig = ref(false);

@@ -92,7 +92,7 @@ export const calculate = ({ needs_list, natural_production_line }: needs_list_ty
         }
       } else if (natural_production_line[id]['增产模式'] == 2) {
         //加速
-        var pro_time = game_data.proliferate_effect[natural_production_line[id]['喷涂点数']]['加速效果'];
+        var pro_time = game_data.proliferate_effect[natural_production_line[id]['喷涂点数']]['speedup'];
         for (var item in recipe['原料']) {
           if (item in in_out_list) {
             in_out_list[item] = Number(in_out_list[item]) + recipe['原料'][item] * recipe_time * pro_time;
@@ -117,7 +117,7 @@ export const calculate = ({ needs_list, natural_production_line }: needs_list_ty
           }
         }
       } else if (natural_production_line[id]['增产模式'] == 4) {
-        var pro_time = game_data.proliferate_effect[natural_production_line[id]['喷涂点数']]['加速效果'];
+        var pro_time = game_data.proliferate_effect[natural_production_line[id]['喷涂点数']]['speedup'];
         for (var item in recipe['原料']) {
           if (item in in_out_list) {
             in_out_list[item] = Number(in_out_list[item]) + recipe['原料'][item] * recipe_time;

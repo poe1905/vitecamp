@@ -37,9 +37,9 @@
             <li class="w-25">目标产物</li>
             <li class="w-25">需求量</li>
             <li class="w-40">所需工厂</li>
-            <li class="w-120">配方选择</li>
-            <li class="w-40">增产剂等级</li>
-            <li class="w-60">增产模式选择</li>
+            <li class="w-90">配方选择</li>
+            <li class="w-30">增产剂等级</li>
+            <li class="w-110">增产模式选择</li>
             <li class="w-40">工厂类型选择</li>
           </ul>
         </div>
@@ -63,7 +63,7 @@
               <ProductImg :imgKey="result.factoriesNum.key" class="inline-block" />
               {{ result.factoriesNum.num }}
             </div>
-            <div class="w-120">
+            <div class="w-80">
               <div v-for="(recipe, index) in recipeList.item_data[result.key]" :key="recipe">
                 <div
                   v-if="index != 0"
@@ -98,13 +98,13 @@
               </div>
             </div>
             <!-- 增产剂等级 -->
-            <div class="w-40 flex">
+            <div class="w-60 flex">
               <div
                 v-for="(sprayingOption, index) in config.miningSprayingOptions"
                 key="sprayingOption.name"
                 class="ml-2 bg-current cursor-pointer"
-                @click="changeRecipeRecipeChoices(result.key, 'additional_level', index)"
-                :class="{ active: get_item_recipe_choices(result.key)['additional_level'] == index }"
+                @click="changeRecipeRecipeChoices(result.key, 'additional_level', sprayingOption.key)"
+                :class="{ active: get_item_recipe_choices(result.key)['additional_level'] == sprayingOption.key }"
               >
                 <!-- get_item_recipe_choices(result.key) -->
                 <div v-if="sprayingOption.key == 0" class="text-cool-gray-50 text-xs text-center leading-loose">
@@ -116,22 +116,31 @@
               </div>
             </div>
             <!-- 选择增产剂模式 -->
-            <div class="w-110 flex">
-              <!-- {{ get_item_recipe_choices(result.key) }} -->
+            <div class="w-90 flex">
               <div
                 v-for="(option, index) in config.miningIncOptions[
                   get_item_recipe_choices(result.key)['additional_mode_index']
                 ]"
                 class="ml-2 bg-current cursor-pointer"
-                :class="{ active: get_item_recipe_choices(result.key)['additional_mode'] == index }"
+                :class="{ active: get_item_recipe_choices(result.key)['additional_mode'] == option.key }"
                 :key="option"
-                @click="changeRecipeRecipeChoices(result.key, 'additional_mode', index)"
+                @click="changeRecipeRecipeChoices(result.key, 'additional_mode', option.key)"
               >
                 <span class="text-cool-gray-50"> {{ option.name }}</span>
               </div>
             </div>
-            <div class="w-40">
-              {{ get_item_recipe_choices(result.key) }}
+            <div class="w-40 flex">
+              <div
+                class="bg-current ml-4 p-1"
+                :class="{ active: get_item_recipe_choices(result.key)['architecture'] == index }"
+                v-for="(facility, index) in facilityLabel(
+                  recipeList.item_data[result.key],
+                  recipeList.item_recipe_choices[result.key],
+                )"
+                @click="changeRecipeRecipeChoices(result.key, 'architecture', index)"
+              >
+                <ProductImg width="22" :imgKey="facility.名称" class="inline-block" />
+              </div>
             </div>
           </div>
         </div>
@@ -193,7 +202,9 @@ const delProduct = (key) => {
 const cloneSelect = () => {
   productList.value = {};
 };
-
+const facilityLabel = (list, key) => {
+  return game_data['factory_data'][recipeList.value.recipe_lists[list[key]]['facility']];
+};
 const recipeList = computed(() => {
   console.log('recipeList', productList);
   // calculate({ needs_list: productList });
