@@ -20,10 +20,12 @@
         <hr style="border-top-width: 3px" />
         <ul class="m-3 overflow-y-auto" :style="{ height: showMiningConfig ? '430px' : '0px' }">
           <li>
-            科技研究速度
+            采矿科技面板倍率
             <el-input-number
+              @change="changeConfig"
               class="w-4"
               :min="1"
+              :max="99999"
               size="small"
               v-model="config.scienceResearchSpeed"
               controls-position="right"
@@ -32,19 +34,37 @@
           </li>
           <li class="flex">
             小型矿机默认覆盖矿脉的数量
-            <el-input-number class="w-4" :min="1" size="small" v-model="config.miniCore" controls-position="right" />
+            <el-input-number
+              class="w-4"
+              @change="changeConfig"
+              :min="1"
+              :max="28"
+              size="small"
+              v-model="config.miniCore"
+              controls-position="right"
+            />
             个
           </li>
           <li>
             大型矿机默认覆盖矿脉的数量
-            <el-input-number class="w-4" :min="1" size="small" v-model="config.largeCore" controls-position="right" />
+            <el-input-number
+              class="w-4"
+              @change="changeConfig"
+              :min="1"
+              :max="10"
+              size="small"
+              v-model="config.largeCore"
+              controls-position="right"
+            />
             个
           </li>
           <li>
             大型矿机默认开采倍率
             <el-input-number
+              @change="changeConfig"
               class="w-4"
               :min="1"
+              :max="9"
               size="small"
               v-model="config.largeCoreWorkingSpeed"
               controls-position="right"
@@ -54,6 +74,7 @@
           <li>
             油井默认开采速度
             <el-input-number
+              @change="changeConfig"
               class="w-4"
               :min="1"
               size="small"
@@ -65,8 +86,10 @@
           <li>
             巨星-氢-开采速度
             <el-input-number
+              @change="changeConfig"
               class="w-4"
-              :min="1"
+              :min="0.0001"
+              :step="0.1"
               size="small"
               v-model="config.hydrogenCollectionRate"
               controls-position="right"
@@ -75,8 +98,10 @@
           <li>
             巨星-重氢-开采速度
             <el-input-number
+              @change="changeConfig"
               class="w-4"
-              :min="1"
+              :min="0.0001"
+              :step="0.1"
               size="small"
               v-model="config.heavyHydrogenCollectionRate"
               controls-position="right"
@@ -85,8 +110,10 @@
           <li>
             巨星-可燃冰-开采速度
             <el-input-number
+              @change="changeConfig"
               class="w-4"
-              :min="1"
+              :min="0.0001"
+              :step="0.1"
               size="small"
               v-model="config.combustibleIceCollectionRate"
               controls-position="right"
@@ -96,6 +123,7 @@
           <li>
             分馏塔过氢量
             <el-input-number
+              @change="changeConfig"
               class="w-4"
               :min="1"
               size="small"
@@ -106,7 +134,14 @@
           </li>
           <li>
             伊卡洛斯手速-手动开采速度
-            <el-input-number class="w-4" :min="1" size="small" v-model="config.shooter" controls-position="right" />
+            <el-input-number
+              class="w-4"
+              @change="changeConfig"
+              :min="1"
+              size="small"
+              v-model="config.shooter"
+              controls-position="right"
+            />
             /个
           </li>
         </ul>
@@ -128,7 +163,13 @@
         <ul class="m-3 overflow-y-auto" :style="{ height: showFactoryConfig ? '380px' : '0px' }">
           <li class="items-center">
             默认采矿设备
-            <el-select v-model="config.defaultMining" class="m-2" placeholder="Select" size="small">
+            <el-select
+              v-model="config.defaultMining"
+              @change="changeMiningConfig"
+              class="m-2"
+              placeholder="Select"
+              size="small"
+            >
               <el-option
                 v-for="option in config.miningOptions"
                 :key="option"
@@ -139,7 +180,13 @@
           </li>
           <li class="items-center">
             默认冶炼设备
-            <el-select v-model="config.defaultSmelting" class="m-2" placeholder="Select" size="small">
+            <el-select
+              v-model="config.defaultSmelting"
+              @change="changeSmeltingConfig"
+              class="m-2"
+              placeholder="Select"
+              size="small"
+            >
               <el-option
                 v-for="option in config.miningSmeltingOptions"
                 :key="option"
@@ -150,7 +197,13 @@
           </li>
           <li class="items-center">
             默认制造
-            <el-select v-model="config.defaultProduction" class="m-2" placeholder="Select" size="small">
+            <el-select
+              v-model="config.defaultProduction"
+              @change="changeProductionConfig"
+              class="m-2"
+              placeholder="Select"
+              size="small"
+            >
               <el-option
                 v-for="option in config.miningProductionOptions"
                 :key="option"
@@ -161,7 +214,13 @@
           </li>
           <li class="items-center">
             默认化工
-            <el-select v-model="config.defaultChemical" class="m-2" placeholder="Select" size="small">
+            <el-select
+              v-model="config.defaultChemical"
+              @change="changeChemicalConfig"
+              class="m-2"
+              placeholder="Select"
+              size="small"
+            >
               <el-option
                 v-for="option in config.miningChemicalOptions"
                 :key="option"
@@ -172,7 +231,13 @@
           </li>
           <li class="items-center">
             默认充电
-            <el-select v-model="config.defaultCharge" class="m-2" placeholder="Select" size="small">
+            <el-select
+              v-model="config.defaultCharge"
+              @change="changeChargeConfig"
+              class="m-2"
+              placeholder="Select"
+              size="small"
+            >
               <el-option
                 v-for="option in config.miningChargeOptions"
                 :key="option"
@@ -183,7 +248,13 @@
           </li>
           <li class="items-center">
             默认喷涂点数
-            <el-select v-model="config.defaultSpraying" class="m-2" placeholder="Select" size="small">
+            <el-select
+              v-model="config.defaultSpraying"
+              @change="changeSprayingConfig"
+              class="m-2"
+              placeholder="Select"
+              size="small"
+            >
               <el-option
                 v-for="option in config.miningSprayingOptions"
                 :key="option"
@@ -193,8 +264,14 @@
             </el-select>
           </li>
           <li class="items-center">
-            默认增产模式 {{}}
-            <el-select v-model="config.defaultInc" class="m-2" placeholder="Select" size="small">
+            默认增产模式
+            <el-select
+              v-model="config.defaultInc"
+              @change="changeIncConfig"
+              class="m-2"
+              placeholder="Select"
+              size="small"
+            >
               <el-option
                 v-for="option in config.IncOptions"
                 :key="option"
@@ -214,10 +291,18 @@ import { isDark, toggleDark } from '@/utils/dark';
 import useThemeStore from '@/store/theme';
 import useConfigStore from '@/store/config';
 import DSP from '@/assets/data/DSP';
+import {
+  calculate,
+  get_item_recipe_choices,
+  set_item_recipe_choices,
+  change_recipe_of,
+  batchChangeFactoryOf,
+  batchChangeProMode,
+  batchChangeProNum,
+} from '@/utils/calculate';
 const theme = useThemeStore();
 const config = useConfigStore();
-console.log('theme', theme);
-console.log('config', config.miningOptions);
+
 const { t, availableLocales, locale } = useI18n();
 const widthOT = computed(() => {
   return theme.compact ? '420px' : '50px';
@@ -246,12 +331,41 @@ const labelHandel = (option) => {
 
   // 如果key 不是数字， 则拿key去 数组里面找到相应的数据
   if (isProxy(option)) {
-    console.log('option.value.key', DSP[option.key].name);
-
     return DSP[option.key].name;
   } else {
     return DSP[option.name];
   }
+};
+const changeConfig = () => {
+  config.changeConfig();
+};
+const changeMiningConfig = (item) => {
+  batchChangeFactoryOf('采矿设备', item);
+  config.changeConfig();
+};
+const changeSmeltingConfig = (item) => {
+  batchChangeFactoryOf('冶炼设备', item);
+  config.changeConfig();
+};
+const changeProductionConfig = (item) => {
+  batchChangeFactoryOf('production_platform', item);
+  config.changeConfig();
+};
+const changeChemicalConfig = (item) => {
+  batchChangeFactoryOf('化工设备', item);
+  config.changeConfig();
+};
+const changeChargeConfig = (item) => {
+  batchChangeFactoryOf('充电设备', item);
+  config.changeConfig();
+};
+const changeIncConfig = (pro_mode) => {
+  batchChangeProMode(pro_mode);
+  config.changeConfig();
+};
+const changeSprayingConfig = (pro_mode) => {
+  batchChangeProNum(pro_mode);
+  config.changeConfig();
 };
 
 const showMiningConfig = ref(false);
@@ -298,8 +412,17 @@ const showFactoryConfig = ref(false);
 .el-select {
   width: 120px;
 }
+.el-input__wrapper {
+  padding-right: 0;
+  background-color: red;
+}
+.nvme .el-input-number .is-controls-right .el-input__wrapper {
+  background-color: red;
+  padding-right: 0;
+}
 .nvmer .el-input-number .el-input__wrapper {
   padding-left: 2px;
+  background-color: red;
   padding-right: 30px;
 }
 .nvmer svg {

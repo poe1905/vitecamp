@@ -1,4 +1,15 @@
 {
+  "Icarus": {
+    "name": "伊卡洛斯",
+    "key": "Icarus",
+    "type": "goods",
+    "path": {
+      "width": "80",
+      "height": "80",
+      "x": "-1107",
+      "y": "-1107"
+    }
+  },
   "accelerator_1": {
     "name": "增产剂 MK.Ⅰ",
     "key": "accelerator_1",

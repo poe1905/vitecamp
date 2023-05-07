@@ -1,7 +1,8 @@
 
 import game_data from '@/assets/data/game_data.json';
 import DSP from '@/assets/data/DSP.json';
-
+import useConfigStore from '@/store/config';
+const config = useConfigStore();
 import solver from 'javascript-lp-solver'
 let list_data = []
 
@@ -201,34 +202,9 @@ const scheme_data = {
     show_result_dict();
   }//更改显示精度
 
-  function BatchChangeFactoryOf(factory) {
-    var building = document.getElementById("batch_setting_" + factory).value;
-    for (var i = 0; i < game_data.recipe_data.length; i++) {
-      if (game_data.recipe_data[i]["facility"] == factory) {
-        scheme_data.scheme_for_recipe[i]["architecture"] = building;
-      }
-    }
-    calculate();
-  }//批量改变某一类型建筑的等级
 
-  function BatchChangeProMode() {
-    var pro_mode = document.getElementById("batch_setting_pro_mode").value;
-    for (var i = 0; i < game_data.recipe_data.length; i++) {
-      if (pro_mode != 0 && !(pro_mode & game_data.recipe_data[i]["增产"])) {
-        continue;
-      }
-      scheme_data.scheme_for_recipe[i]["additional_mode"] = Number(pro_mode);
-    }
-    calculate();
-  }//批量更改增产剂使用模式
 
-  function BatchChangeProNum() {
-    var pro_num = document.getElementById("batch_setting_pro_num").value;
-    for (var i = 0; i < game_data.recipe_data.length; i++) {
-      scheme_data.scheme_for_recipe[i]["additional_level"] = pro_num;
-    }
-    calculate();
-  }//批量更改配方使用的增产剂的等级
+
 
   function ChangeBuildingLayer(building) {
     stackable_buildings[building] = document.getElementById("stack_of_" + building).value;
@@ -513,19 +489,6 @@ const scheme_data = {
       // document.getElementById("surplus_list").innerHTML = str;
     }//显示多余产出
 
-    function mineralize(item) {
-      mineralize_list[item] = JSON.parse(JSON.stringify(item_graph[item]));
-      item_graph[item]["material"] = {};
-      show_mineralize_list();
-      calculate();
-    }//原矿化物品
-
-    function unmineralize(item) {
-      item_graph[item] = JSON.parse(JSON.stringify(mineralize_list[item]));
-      delete mineralize_list[item];
-      show_mineralize_list();
-      calculate();
-    }//取消原矿化
 
   }//运行逻辑相关
 
@@ -576,6 +539,18 @@ const scheme_data = {
 //主要计算逻辑
 export const calculate = (needs_list) => {
   excessProduct = {}
+  scheme_data.mining_rate = {
+    "科技面板倍率": config.scienceResearchSpeed,
+    "小矿机覆盖矿脉数": config.miniCore,
+    "大矿机覆盖矿脉数": config.largeCore,
+    "大矿机工作倍率": config.largeCoreWorkingSpeed,
+    "油井期望面板": config.oilWellSpeed,
+    "巨星氢面板": config.hydrogenCollectionRate,
+    "巨星重氢面板": config.heavyHydrogenCollectionRate,
+    "巨星可燃冰面板": config.combustibleIceCollectionRate,
+    "伊卡洛斯手速": config.shooter,
+  };
+  scheme_data.energy_contain_miner = config.energy_contain_miner
   console.log("执行了一次,calculate", scheme_data.scheme_for_recipe);
   multi_sources = {};
   result_dict = {};
@@ -809,14 +784,32 @@ export const calculate = (needs_list) => {
   console.log("配方item_recipe_choices", scheme_data.item_recipe_choices)
   console.log("配方scheme_for_recipe", scheme_data.scheme_for_recipe)
   console.log("多余产物信息excessProduct", excessProduct)
+
+  // 将多余的产物删除掉
+  for (const key in excessProduct) {
+    if (Object.hasOwnProperty.call(excessProduct, key)) {
+      const element = excessProduct[key];
+      if (element == 0) {
+        delete excessProduct[key]
+      }
+    }
+  }
+  list_data = list_data.filter(item => {
+    return !(Number(item.efficiency) == 0 && !excessProduct[item.key])
+  })
+
+  console.log("new_list_data", list_data);
   return {
     result_dict,
     building_list,
-    list_data,
+    list_data: list_data,
     item_data,
+    excessProduct,
     item_recipe_choices: scheme_data.item_recipe_choices,
     scheme_for_recipe: scheme_data.scheme_for_recipe,
-    recipe_lists
+    recipe_lists,
+    mineralize_list,
+    energy_cost
   }
 }//计算主要逻辑框架
 
@@ -1468,6 +1461,9 @@ function show_result_dict() {
   for (var building in building_list) {
     building_str += building + ":" + building_list[building] + "</br>";
   }
+
+
+  console.log("当前耗电多少energy_cost", energy_cost);
   // document.getElementById("建筑统计").innerHTML = building_str;
   // document.getElementById("耗电统计").innerHTML = "预估电力需求下限：" + energy_cost + " MW" + if_energy_contain_miner();
   function if_energy_contain_miner() {
@@ -1606,4 +1602,53 @@ function initboc() {
 
   console.log("game_data", game_data);
   // calculate();
+}
+
+export const batchChangeProMode = (pro_mode) => {
+  console.log("batchChangeProMode", pro_mode, game_data);
+  for (var i = 0; i < game_data.recipe_data.length; i++) {
+    if (pro_mode != 0 && !(pro_mode & game_data.recipe_data[i]["additional_mode"])) {
+      continue;
+    }
+    scheme_data.scheme_for_recipe[i]["additional_mode"] = Number(pro_mode);
+  }
+  // calculate();
 }//批量更改增产剂使用模式
+
+export const batchChangeProNum = (pro_num) => {
+  console.log("pro_numpro_numpro_numpro_numpro_numpro_numpro_numpro_num", pro_num, scheme_data.scheme_for_recipe);
+  // var pro_num = document.getElementById("batch_setting_pro_num").value;
+  for (var i = 0; i < game_data.recipe_data.length; i++) {
+    scheme_data.scheme_for_recipe[i]["additional_level"] = pro_num;
+  }
+  calculate();
+}//批量更改配方使用的增产剂的等级
+
+
+export const batchChangeFactoryOf = (factory, building) => {
+  // var building = document.getElementById("batch_setting_" + factory).value;
+  for (var i = 0; i < game_data.recipe_data.length; i++) {
+    console.log(game_data.recipe_data[i]);
+    if (game_data.recipe_data[i]["facility"] == factory) {
+      scheme_data.scheme_for_recipe[i]["architecture"] = building;
+      console.log('  scheme_data.scheme_for_recipe[i]["architecture"] ', scheme_data.scheme_for_recipe);
+    }
+  }
+  // calculate();
+}//批量改变某一类型建筑的等级
+
+
+export const mineralize = (item) => {
+  console.log("item_graph", item_graph);
+  mineralize_list[item] = JSON.parse(JSON.stringify(item_graph[item]));
+  item_graph[item]["material"] = {};
+  // show_mineralize_list();
+  // calculate();
+}//原矿化物品
+
+export const unmineralize = (item) => {
+  item_graph[item] = JSON.parse(JSON.stringify(mineralize_list[item]));
+  delete mineralize_list[item];
+  // show_mineralize_list();
+  // calculate();
+}//取消原矿化

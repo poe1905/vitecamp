@@ -7,6 +7,7 @@ const config = defineStore({
   persist: true,
   state: () => {
     return {
+      isChange: false, // 检测是否数据发生变化, 发生变化的时候就重新计算公式参数
       scienceResearchSpeed: 1, //科技研究速度
       miniCore: 8, //小型矿机默认覆盖矿脉的数量
       largeCore: 16, //大型矿机默认覆盖矿脉的数量
@@ -17,53 +18,64 @@ const config = defineStore({
       combustibleIceCollectionRate: 0.5, //巨星-可燃冰-开采速度
       shooter: 1, //伊卡洛斯手速-手动开采速度
       fractionatingColumnSpeed: 60, //分馏塔过氢量
-
-      defaultMining: 'mining_drill', //默认采矿设备 采矿机
+      energy_contain_miner: 0,
+      defaultMining: '0', //默认采矿设备 采矿机
       miningOptions: [
         {
-          key: 'mining_drill',
+          key: '0',
+          name: '采矿机',
         },
         {
-          key: 'mining_drill_mk2',
+          key: '1',
+          name: '大型采矿机',
         },
       ],
-      defaultSmelting: 'smelter', // 默认冶炼设备 电弧熔炉
+      defaultSmelting: '0', // 默认冶炼设备 电弧熔炉
       miningSmeltingOptions: [
         {
-          key: 'smelter',
+          key: '0',
+          name: '电弧熔炉',
         },
         {
-          key: 'smelter_2',
+          key: '1',
+          name: '位面熔炉',
         },
       ],
-      defaultProduction: 'assembler_1', // 默认制造台 制作台1
+      defaultProduction: '0', // 默认制造台 制作台1
       miningProductionOptions: [
         {
-          key: 'assembler_1',
+          key: '0',
+          name: '制造台 MK.Ⅰ',
         },
         {
-          key: 'assembler_2',
+          key: '1',
+          name: '制造台 MK.Ⅱ',
         },
         {
-          key: 'assembler_3',
+          key: '2',
+          name: '制造台 MK.Ⅲ',
         },
       ],
-      defaultChemical: 'chemical_plant', // 默认化工厂 化工厂
+      defaultChemical: '0', // 默认化工厂 化工厂
       miningChemicalOptions: [
         {
-          key: 'chemical_plant',
+          key: '0',
+          name: '化工厂',
         },
         {
-          key: 'chemical_plant_2',
+          key: '1',
+          name: '量子化工厂',
         },
       ],
-      defaultCharge: 'energy_exchanger', // 默认充电设备
+      defaultCharge: '0', // 默认充电设备
       miningChargeOptions: [
         {
-          key: 'energy_exchanger',
+          key: '0',
+          name: '能量枢纽',
         },
         {
-          key: 'accumulator',
+          key: '1',
+          name: '蓄电器',
         },
       ],
       defaultSpraying: '0', // 默认喷涂点数
@@ -161,6 +173,9 @@ const config = defineStore({
   getters: {},
   // pinia 放弃了 mutations 只使用 actions
   actions: {
+    changeConfig() {
+      this.isChange = !this.isChange;
+    },
     restoreMinings() {
       // 恢复默认设置参数
       this.scienceResearchSpeed = 1;
@@ -176,13 +191,20 @@ const config = defineStore({
     },
     restoreFactory() {
       //恢复默认工厂配置参数
-      this.defaultMining = 'mining_drill';
-      this.defaultSmelting = 'smelter';
-      this.defaultProduction = 'assembler_1';
-      this.defaultChemical = 'chemical_plant';
-      this.defaultCharge = 'energy_exchanger';
+      this.defaultMining = '0';
+      this.defaultSmelting = '0';
+      this.defaultProduction = '0';
+      this.defaultChemical = '0';
+      this.defaultCharge = '0';
       this.defaultSpraying = '0';
       this.defaultInc = '0';
+      this.energy_contain_miner = 0;
+    },
+    change_energy_contain_miner() {
+      console.log('1111', this.energy_contain_miner);
+
+      this.changeConfig();
+      this.energy_contain_miner = this.energy_contain_miner ? 0 : 1;
     },
   },
 });
