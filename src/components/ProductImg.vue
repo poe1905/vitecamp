@@ -11,7 +11,7 @@ import useCounterStore from '@/store/theme';
 import second from '@/assets/image/css_sprites.png';
 import DSP from '../assets/data/DSP';
 interface ProductImgType {
-  imgKey: string;
+  imgKey: string | { value: string };
   width?: number | string;
   num?: number;
 }
@@ -20,9 +20,9 @@ const props = withDefaults(defineProps<ProductImgType>(), {
   imgKey: '',
   width: '40',
 });
-const multiplier = props.width / 80;
+const multiplier = Number(props.width) / 80;
 let imgStyle = computed(() => {
-  let key = props.imgKey.value ? props.imgKey.value : props.imgKey;
+  let key = props.imgKey?.value ? props.imgKey?.value : props.imgKey;
   if (!DSP[key]) {
     console.error(key);
     return;

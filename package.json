@@ -1,12 +1,13 @@
 {
-  "name": "vitecamp",
-  "version": "0.0.0",
-  "author": "菜猫子neko",
+  "name": "DSP_web_quantizing_calculator",
+  "version": "0.0.1",
+  "author": "makuwa8992",
   "packageManager": "pnpm@7.9.0",
   "license": "MIT",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc --noEmit --skipLibCheck && vite build",
+    "build": "vite build",
+    "build:type": "vue-tsc --noEmit --skipLibCheck && vite build",
     "lint": "eslint src",
     "preview": "vite preview",
     "prepare": "husky install"
@@ -66,5 +67,6 @@
     "*.{ts,js,vue}": [
       "eslint"
     ]
-  }
+  },
+  "lint-staged": {}
 }

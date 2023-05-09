@@ -22,9 +22,9 @@ module.exports = {
     'plugin:prettier/recommended', // 添加 prettier 插件
   ],
   parserOptions: {
-    ecmaVersion: 'latest',
-    parser: '@typescript-eslint/parser',
-    sourceType: 'module',
+    // ecmaVersion: 'latest',
+    // parser: '@typescript-eslint/parser',
+    // sourceType: 'module',
   },
   plugins: ['vue', '@typescript-eslint', 'import'],
   rules: {

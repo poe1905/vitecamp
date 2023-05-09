@@ -1,6 +1,6 @@
 <template>
   <div class="dsp-dialog">
-    <el-dialog v-model="visible" @close="clone">
+    <el-dialog v-model="visible" @close="close">
       <div id="yin-yang">
         <div class="box-content">
           <h2 class="text-content pl-8 .text-xl font-black">添加目标参数</h2>
@@ -9,21 +9,18 @@
             <ul class="flex">
               <li
                 :class="{ activate: typeNumber == key }"
-                class="cursor-pointer select-none  flex justify-center items-center"
-                v-for="key in Object.keys(lsit)"
+                class="cursor-pointer select-none flex justify-center items-center"
+                v-for="key in Object.keys(list)"
                 :key="key"
                 @click="typeNumber = key"
               >
                 <ProductImg :imgKey="key" />
-
               </li>
             </ul>
           </menu>
-          <!-- <hr /> -->
-          <!-- <h2 class="text-content pl-8 text-3xl font-black">{{ currentSelectedProduct }}</h2> -->
           <hr />
           <div class="items p-4 pr-5">
-            <template v-for="type in lsit[typeNumber]" :key="type">
+            <template v-for="type in list[typeNumber]" :key="type">
               <template v-for="item in type">
                 <!-- 没有的空位，不需要hover 样式 -->
                 <div
@@ -35,7 +32,7 @@
                       if (item.key == 'none') return;
 
                       props.clickSelect({
-                        key:item.key,
+                        key: item.key,
                         num: num,
                       });
                     }
@@ -50,14 +47,11 @@
           <div class="pt-3">
             <p class="pl-8 text-lg">
               设置当前产物效率
-              <el-input-number class="ml-3" v-model="num" size="small" controls-position="right" @change="numChange" />
+              <el-input-number class="ml-3" v-model="num" size="small" controls-position="right" />
             </p>
           </div>
-          <el-button class="float-right mr-8" type="success" @click="selectProduct">添加产物</el-button>
         </div>
       </div>
-
-      <!-- <el-button type="success" @click="selectProduct">选择</el-button> -->
     </el-dialog>
   </div>
 </template>
@@ -65,11 +59,11 @@
 import './index.sass';
 const { t } = useI18n();
 import DSP from '@/assets/data/DSP';
-import lsit from '@/assets/data/list';
+import list from '@/assets/data/list';
 
 const props = defineProps({
   visible: Boolean,
-  clone: Function,
+  close: Function,
   clickSelect: Function,
 });
 watch(
@@ -82,20 +76,13 @@ watch(
   },
 );
 
-console.log('DSP', Object.keys(lsit));
 const typeNumber = ref('goods');
 const itemNumber = ref(null);
 const currentSelectedProduct = computed(() => {
   return itemNumber.value === null ? '请选择目标产物 ↓' : `目标物是 : ${DSP[itemNumber.value].name}, ${num.value}/min`;
 });
-const selectProduct = () => {
-
-};
-
 const num = ref(60);
-const numChange = (num) => {
-  console.log(num);
-};
+
 const closeDialog = () => {
   props.clone();
 };

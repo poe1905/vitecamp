@@ -6,7 +6,6 @@ const serverOptions = {
   port: 9527,
   liveReload: false
 };
-console.log("运行...");
 const server = http.createServer(serverOptions);
 
 server.on('listening', () => {

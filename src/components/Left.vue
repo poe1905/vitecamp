@@ -162,7 +162,7 @@
         <hr style="border-top-width: 3px" />
         <ul class="m-3 overflow-y-auto" :style="{ height: showFactoryConfig ? '380px' : '0px' }">
           <li class="items-center">
-            默认采矿设备
+            默认采矿设备1
             <el-select
               v-model="config.defaultMining"
               @change="changeMiningConfig"
@@ -308,7 +308,6 @@ const widthOT = computed(() => {
   return theme.compact ? '420px' : '50px';
 });
 const restpredDefault = (type) => {
-  console.log('type', type);
   if (type === 'mining') {
     config.restoreMinings();
   } else {
@@ -339,7 +338,7 @@ const labelHandel = (option) => {
 const changeConfig = () => {
   config.changeConfig();
 };
-const changeMiningConfig = (item) => {
+const changeMiningConfig = (item: any) => {
   batchChangeFactoryOf('采矿设备', item);
   config.changeConfig();
 };
