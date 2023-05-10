@@ -1,6 +1,6 @@
 <template>
   <div class="dsp-dialog">
-    <el-dialog v-model="visible" @close="close">
+    <el-dialog v-model="props.visible" @close="close">
       <div id="yin-yang">
         <div class="box-content">
           <h2 class="text-content pl-8 .text-xl font-black">添加目标参数</h2>
