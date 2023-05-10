@@ -10,7 +10,9 @@
     "build:type": "vue-tsc --noEmit --skipLibCheck && vite build",
     "lint": "eslint src",
     "preview": "vite preview",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "predeploy": "npm run  build",
+    "deploy": "gh-pages -d dist -r https://github.com/poe1905/vitecamp -b gh-page"
   },
   "dependencies": {
     "@element-plus/icons-vue": "^2.1.0",
@@ -44,6 +46,7 @@
     "eslint-plugin-import": "^2.25.4",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-vue": "^8.3.0",
+    "gh-pages": "^5.0.0",
     "husky": "^7.0.4",
     "lint-staged": "^12.3.2",
     "markdown-it-link-attributes": "^4.0.0",
