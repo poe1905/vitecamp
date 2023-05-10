@@ -10,10 +10,14 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 16
-      - run: npm install
-      - run: npm build
+      steps:
+        - uses: actions/checkout@v3
+        - uses: pnpm/action-setup@v2
+          with:
+            version: 6.32.9
+        - uses: actions/setup-node@v3
+          with:
+            node-version: '16.*'
+            cache: 'pnpm'
+        - run: pnpm install --frozen-lockfile
+        - run: pnpm test
