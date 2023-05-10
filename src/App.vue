@@ -3,7 +3,6 @@ import zhCn from 'element-plus/lib/locale/lang/zh-cn';
 
 const locale = zhCn;
 </script>
-
 <template>
   <div>
     <el-config-provider :locale="locale">
