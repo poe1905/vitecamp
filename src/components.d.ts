@@ -27,7 +27,6 @@ declare module '@vue/runtime-core' {
     'IZondicons:indentIncrease': typeof import('~icons/zondicons/indent-increase')['default']
     Left: typeof import('./components/Left.vue')['default']
     ProductImg: typeof import('./components/ProductImg.vue')['default']
-    Readme: typeof import('./components/Readme.md')['default']
     Right: typeof import('./components/Right.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
