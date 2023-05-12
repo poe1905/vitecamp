@@ -16,7 +16,7 @@ export default defineConfig((env) => {
         '@': resolve(__dirname, './src'), // 把 @ 指向到 src 目录去
       },
     },
-    publicPath: '.',
+
     // 服务设置
     server: {
       host: true, // host设置为true才可以使用network的形式，以ip访问项目
@@ -39,6 +39,7 @@ export default defineConfig((env) => {
       // 消除打包大小超过500kb警告
       chunkSizeWarningLimit: 2000,
       minify: 'esbuild',
+      publicPath: '.',
       assetsDir: 'static/assets',
       // 静态资源打包到dist下的不同目录
       rollupOptions: {
