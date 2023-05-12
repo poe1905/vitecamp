@@ -39,7 +39,6 @@ export default defineConfig((env) => {
       // 消除打包大小超过500kb警告
       chunkSizeWarningLimit: 2000,
       minify: 'esbuild',
-      publicPath: '.',
       assetsDir: 'static/assets',
       // 静态资源打包到dist下的不同目录
       rollupOptions: {

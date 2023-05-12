@@ -7,7 +7,6 @@
 
 <script setup lang="ts">
 import './index.scss';
-import vitecamp from '@/assets/svg/vitecamp.svg?component';
 import useThemeStore from '@/store/theme';
 const theme = useThemeStore();
 const { t } = useI18n();
