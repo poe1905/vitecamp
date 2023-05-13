@@ -112,7 +112,6 @@ const scheme_data = {
       needs_list[needs_item] = Number(needs_list[needs_item]) + Number(needs_amount);
     }
     show_needs_list(); /// 展示需求列表
-    calculate();
   }//增添需求
 
   function resetNeeds(item) {
@@ -135,7 +134,6 @@ const scheme_data = {
       needs_list[item] = Number(num);
     }
     show_needs_list();
-    calculate();
   }
   function loadData() {
     var data_of_game = JSON.parse(localStorage.getItem('game_data'));
@@ -143,7 +141,6 @@ const scheme_data = {
       game_data = JSON.parse(localStorage.getItem('game_data'));
       item_data = get_item_data();
     }
-    calculate();
   }//读取游戏数据
 
   function saveData() {
@@ -159,7 +156,7 @@ const scheme_data = {
     if (scheme) {
       scheme_data = JSON.parse(localStorage.getItem('scheme_data'));
     }
-    calculate();
+    // calculate();
   }//读取生产策略
 
   function clearData() {
@@ -173,7 +170,6 @@ const scheme_data = {
     scheme_data.scheme_for_recipe[recipe_id]["additional_mode"] = document.getElementById("pro_mode_for_" + item).value;
     scheme_data.scheme_for_recipe[recipe_id]["architecture"] = document.getElementById("factory_for_" + item).value;
     // change_result_row_for_item(item);
-    calculate();
   }//切换配方制造时的选项
 
   function init_item_list() {
@@ -192,7 +188,6 @@ const scheme_data = {
     else {
       document.getElementById("是否自喷涂").innerHTML = "<button onclick=\"if_proliferate_itself(1)\">自喷涂?</button>No!";
     }
-    calculate();
   }//增产剂自喷涂勾选选项
 
   function changeFixedNum() {
@@ -203,12 +198,12 @@ const scheme_data = {
 
   function ChangeBuildingLayer(building) {
     stackable_buildings[building] = document.getElementById("stack_of_" + building).value;
-    calculate();
+
   }
 
   function changeMiningRate(i) {
     scheme_data.mining_rate[i] = Number(document.getElementById("mining_rate_" + i).value);
-    calculate();
+
   }
 
   function addNaturalProductionLine() {
@@ -221,7 +216,7 @@ const scheme_data = {
     natural_production_line[i]["architecture"] = 0;
     natural_production_line[i]["additional_mode"] = 0;
     show_natural_production_line();
-    calculate();
+
   }
 
   function NPChangeSchemeOf(i) {
@@ -230,7 +225,7 @@ const scheme_data = {
     natural_production_line[i]["additional_level"] = document.getElementById("pro_num_of_natural_production_" + i).value;
     natural_production_line[i]["建筑数量"] = document.getElementById("building_num_of_natural_production_" + i).value;
     show_natural_production_line();
-    calculate();
+
   }
 
   function NPDeleteLine(i) {
@@ -239,7 +234,7 @@ const scheme_data = {
     }
     natural_production_line.pop();
     show_natural_production_line();
-    calculate();
+
   }
 
   function NPChangeItem(i) {
@@ -265,7 +260,6 @@ const scheme_data = {
     else {
       game_data.factory_data["分馏设备"][0]["耗能"] = 0.72;
     }
-    calculate();
   }//更改分馏塔过氢带速
 
   function IfEnergyContainMiner() {

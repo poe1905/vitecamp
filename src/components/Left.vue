@@ -1,20 +1,39 @@
 <template>
   <div class="container-left">
-    <div class="title h-16">
-      <h1 v-if="theme.compact" class="truncate pt-5 pb-5 text-center">戴森球计划量化计算器</h1>
+    <div class="title h-11 flex justify-between items-center">
+      <span></span>
+      <h1 v-if="theme.compact">更多设置</h1>
+
+      <el-tooltip class="box-item" effect="dark" content="点击展开更多设置" placement="right">
+        <el-icon :size="18" color="#222" class="mr-3">
+          <button class="icon-btn mx-2 !outline-none" @click="click()">
+            <i-zondicons:indent-decrease v-if="theme.compact" class="icon-footer" />
+            <i-zondicons:indent-increase v-else class="icon-footer -rotate-x-180" />
+          </button>
+        </el-icon>
+      </el-tooltip>
     </div>
     <div class="nvmer overflow-y-auto">
       <!-- 采矿默认参数设置 -->
       <div class=" " v-if="theme.compact">
         <h2
-          class="sticky bg-cyan-300 z-99 top-0 text-lg m-1 flex justify-center items-center"
+          class="sticky bg-cyan-300 z-99 top-0 text-lg flex justify-center items-center"
           @click="showMiningConfig = !showMiningConfig"
         >
           配置当前工厂的默认参数
           <div class="pt-2 ml-5">
-            <i-zondicons:arrow-thick-up v-if="showMiningConfig" />
-            <i-zondicons:arrow-thick-down v-else />
-            <i-ant-design:delete-filled class="ml-2" @click.stop="config.restoreMinings()" />
+            <el-tooltip
+              class="box-item"
+              effect="dark"
+              :content="showMiningConfig ? '点击收起' : '点击展开'"
+              placement="top"
+            >
+              <i-zondicons:arrow-thick-up v-if="showMiningConfig" />
+              <i-zondicons:arrow-thick-down v-else />
+            </el-tooltip>
+            <el-tooltip class="box-item" effect="dark" content="删除恢复默认" placement="top">
+              <i-ant-design:delete-filled class="ml-2" @click.stop="config.restoreMinings()" />
+            </el-tooltip>
           </div>
         </h2>
         <hr style="border-top-width: 3px" />
@@ -23,8 +42,8 @@
             采矿科技面板倍率
             <el-input-number
               @change="changeConfig"
-              class="w-4"
-              :min="1"
+              class="w-7"
+              :min="0.0001"
               :max="99999"
               size="small"
               v-model="config.scienceResearchSpeed"
@@ -35,7 +54,7 @@
           <li class="flex">
             小型矿机默认覆盖矿脉的数量
             <el-input-number
-              class="w-4"
+              class="w-7"
               @change="changeConfig"
               :min="1"
               :max="28"
@@ -48,7 +67,7 @@
           <li>
             大型矿机默认覆盖矿脉的数量
             <el-input-number
-              class="w-4"
+              class="w-7"
               @change="changeConfig"
               :min="1"
               :max="10"
@@ -62,7 +81,7 @@
             大型矿机默认开采倍率
             <el-input-number
               @change="changeConfig"
-              class="w-4"
+              class="w-7"
               :min="1"
               :max="9"
               size="small"
@@ -75,7 +94,7 @@
             油井默认开采速度
             <el-input-number
               @change="changeConfig"
-              class="w-4"
+              class="w-7"
               :min="1"
               size="small"
               v-model="config.oilWellSpeed"
@@ -87,7 +106,7 @@
             巨星-氢-开采速度
             <el-input-number
               @change="changeConfig"
-              class="w-4"
+              class="w-7"
               :min="0.0001"
               :step="0.1"
               size="small"
@@ -99,7 +118,7 @@
             巨星-重氢-开采速度
             <el-input-number
               @change="changeConfig"
-              class="w-4"
+              class="w-7"
               :min="0.0001"
               :step="0.1"
               size="small"
@@ -111,7 +130,7 @@
             巨星-可燃冰-开采速度
             <el-input-number
               @change="changeConfig"
-              class="w-4"
+              class="w-7"
               :min="0.0001"
               :step="0.1"
               size="small"
@@ -124,7 +143,7 @@
             分馏塔过氢量
             <el-input-number
               @change="changeConfig"
-              class="w-4"
+              class="w-7"
               :min="1"
               size="small"
               v-model="config.fractionatingColumnSpeed"
@@ -135,7 +154,7 @@
           <li>
             伊卡洛斯手速-手动开采速度
             <el-input-number
-              class="w-4"
+              class="w-7"
               @change="changeConfig"
               :min="1"
               size="small"
@@ -154,9 +173,18 @@
         >
           批量配置工厂设置
           <div class="pt-2 ml-5">
-            <i-zondicons:arrow-thick-up v-if="showFactoryConfig" />
-            <i-zondicons:arrow-thick-down v-else />
-            <i-ant-design:delete-filled class="ml-2" @click.stop="config.restoreFactory()" />
+            <el-tooltip
+              class="box-item"
+              effect="dark"
+              :content="showFactoryConfig ? '点击收起' : '点击展开'"
+              placement="top"
+            >
+              <i-zondicons:arrow-thick-up v-if="showFactoryConfig" />
+              <i-zondicons:arrow-thick-down v-else />
+            </el-tooltip>
+            <el-tooltip class="box-item" effect="dark" content="删除恢复默认" placement="top">
+              <i-ant-design:delete-filled class="ml-2" @click.stop="config.restoreFactory()" />
+            </el-tooltip>
           </div>
         </h2>
         <hr style="border-top-width: 3px" />
@@ -307,6 +335,12 @@ const { t, availableLocales, locale } = useI18n();
 const widthOT = computed(() => {
   return theme.compact ? '420px' : '50px';
 });
+
+const click = () => {
+  // 点击切换侧边栏状态;
+  theme.changeCompact();
+};
+
 const restpredDefault = (type) => {
   if (type === 'mining') {
     config.restoreMinings();

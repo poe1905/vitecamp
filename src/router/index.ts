@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory, Router, RouteRecordRaw } from 'vue-router';
+import { createRouter, createWebHistory, createWebHashHistory, Router, RouteRecordRaw } from 'vue-router';
 import NProgress from 'nprogress';
 import exceptionRoutes from '@/router/route.exception';
 import asyncRoutes from '@/router/route.async';
@@ -13,9 +13,10 @@ const routes: Array<RouteRecordRaw> = [
   ...exceptionRoutes,
 ];
 
+// createWebHistory  - >History  模式
+// createWebHashHistory  - >hash  模式
 const router: Router = createRouter({
-  // 新的vue-router4 使用 history路由模式 和 base前缀
-  history: createWebHistory(import.meta.env.VITE_BASE),
+  history: createWebHashHistory(import.meta.env.VITE_BASE),
   routes,
 });
 

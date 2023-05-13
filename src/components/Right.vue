@@ -1,18 +1,22 @@
 <template>
   <div class="">
     <div class="top pt-3 pl-3 pb-3 flex items-center">
-      <el-icon :size="18" color="#222" class="mr-5">
-        <button class="icon-btn mx-2 !outline-none" @click="click()">
-          <i-zondicons:indent-decrease v-if="theme.compact" class="icon-footer" />
-          <i-zondicons:indent-increase v-else class="icon-footer -rotate-x-180" />
-        </button>
-      </el-icon>
+      <!-- <el-tooltip class="box-item" effect="dark" content="点击展开更多设置" placement="top">
+        <el-icon :size="18" color="#222" class="mr-5">
+          <button class="icon-btn mx-2 !outline-none" @click="click()">
+            <i-zondicons:indent-decrease v-if="theme.compact" class="icon-footer" />
+            <i-zondicons:indent-increase v-else class="icon-footer -rotate-x-180" />
+          </button>
+        </el-icon>
+      </el-tooltip> -->
+
+      <!-- <span class="mr-5">更多设置</span> -->
       <el-button type="warning" round @click="restorConfig">清除所有配置信息</el-button>
     </div>
 
     <div class="container-right overflow-y-auto">
       <div class="add-items min-h-20 max-h-95 overflow-y-auto">
-        <div class="sticky top-0 bg-cyan-600 z-99 pt-5 pl-5">
+        <div class="sticky top-0 z-99 p-5">
           选择目标物
           <ElButton @click="openSelect"> 添加一个新产物</ElButton>
           <ElButton v-show="Object.keys(productList).length > 0" @click="cloneSelect"> 清空产物列表</ElButton>
@@ -40,7 +44,7 @@
       <DSPElDialog :visible="dialogFormVisible" :close="closeProduct" :clickSelect="selectProduct"></DSPElDialog>
       <!-- 配方详情列表内容 -->
       <div class="lists min-h-35">
-        <div class="sticky top-0 z-99">
+        <div class="sticky top-0 z-99 list-title">
           <ul class="flex text-center">
             <li class="btn-action">操作</li>
             <li class="target-product">目标产物</li>
@@ -93,20 +97,20 @@
                 <div v-for="material in Object.keys(recipeList.recipe_lists[recipe].in)">
                   <ProductImg
                     :imgKey="material"
-                    class="inline-block"
-                    :width="25"
+                    class="inline-block mr-1"
+                    :width="35"
                     :num="recipeList.recipe_lists[recipe].in[material]"
                   />
                 </div>
 
                 <div v-if="Object.keys(recipeList.recipe_lists[recipe].in).length > 0" class="text-cool-gray-50">
-                  ==>
+                  <i-zondicons:arrow-thin-right> </i-zondicons:arrow-thin-right>
                 </div>
                 <div v-for="product in Object.keys(recipeList.recipe_lists[recipe].out)">
                   <ProductImg
                     :imgKey="product"
-                    class="inline-block"
-                    :width="25"
+                    class="inline-block mr-1"
+                    :width="35"
                     :num="recipeList.recipe_lists[recipe].out[product]"
                   />
                 </div>
@@ -130,7 +134,7 @@
                 {{ sprayingOption.name }}
               </div>
               <div v-else>
-                <ProductImg width="22" :imgKey="sprayingOption.name" class="inline-block" />
+                <ProductImg width="35" :imgKey="sprayingOption.name" class="inline-block" />
               </div>
             </div>
           </div>
@@ -167,7 +171,7 @@
         <template v-if="Object.keys(recipeList.building_list).length > 0">
           <div>总计需要的建筑:</div>
           <div v-for="building in Object.keys(recipeList.building_list)">
-            <ProductImg width="22" :imgKey="building" class="inline-block" />
+            <ProductImg width="35" :imgKey="building" class="inline-block" />
             {{ DSP[building].name }} --- {{ recipeList.building_list[building] }} 个
           </div>
           <div>
@@ -253,6 +257,8 @@ const facilityLabel = (list, key) => {
   return game_data['factory_data'][recipeList.value.recipe_lists[list[key]]['facility']];
 };
 const recipeList = computed(() => {
+  console.log('计算的需求信息', productList.value);
+
   const data = calculate(productList.value);
   // TODO 这个 console  帮定了依赖项， 如果删除，则丢失，不能相应批量改变
   console.log('数据发生改变，重新计算所有依赖', config.isChange);
@@ -284,26 +290,37 @@ const change_energy = () => {
 </script>
 
 <style lang="scss">
+.bg-current {
+  background-color: #878787;
+}
 .top {
   height: 45px;
-  background-color: #1111;
+  background-color: #9bdad2;
+  border-bottom: #8c949c solid 2px;
 }
-
+.sticky {
+  color: #ffff;
+  background-color: #1d1d37;
+}
 .container-right {
   background-color: #a7a4a4;
   height: calc(100vh - 45px);
+  border-bottom: #8c949c solid 2px;
 }
 
 .lists {
   background-color: #a1c7bf;
+  border-bottom: #8c949c solid 2px;
   /* height: calc(100vh - 138px); */
 }
 .lists > div {
   background-color: #a1c7bf;
 }
-
+.list-title {
+  border-bottom: #42586c solid 2px;
+}
 .list-content {
-  border-bottom: solid 2px #444;
+  border-bottom: solid 2px #7386aa;
 }
 
 .list-content:nth-last-child(1) {
@@ -327,7 +344,7 @@ const change_energy = () => {
   border: none;
 }
 .active {
-  background-color: #7386aa;
+  background-color: #42586c;
 }
 
 .btn-action {
@@ -353,7 +370,7 @@ const change_energy = () => {
   width: 14%;
 }
 .production {
-  width: 10%;
+  width: 20%;
 }
 .production-model {
   width: 14%;

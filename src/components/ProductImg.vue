@@ -51,9 +51,8 @@ let imgStyle = computed(() => {
   width: 10px;
   height: 16px;
   line-height: 16px;
-  background-color: #cac3c385;
-  bottom: 2px;
-  right: 1px;
+  bottom: -3px;
+  right: -3px;
   color: #fff;
   transform: scale(0.8);
 }

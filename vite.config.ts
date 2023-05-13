@@ -8,6 +8,7 @@ export default defineConfig((env) => {
 
   return {
     base: viteEnv.VITE_BASE,
+    publicPath: './',
     // 插件
     plugins: [presets(env)],
     // 别名设置
