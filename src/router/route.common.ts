@@ -6,7 +6,7 @@ const commonRoutes: Array<RouteRecordRaw> = [
     path: '/',
     name: 'home',
     meta: {
-      title: '戴森求计划量化计算器',
+      title: '戴森球计划量化计算器',
       icon: '',
     },
     component: () => import('@/views/home/index.vue'),

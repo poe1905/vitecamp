@@ -1,10 +1,10 @@
 <template>
   <div class="container-left">
-    <div class="title h-11 flex justify-between items-center">
+    <div class="title flex justify-between items-center">
       <span></span>
-      <h1 v-if="theme.compact">更多设置</h1>
+      <h1 v-if="theme.compact" class="bg-light-50">更多设置</h1>
 
-      <el-tooltip class="box-item" effect="dark" content="点击展开更多设置" placement="right">
+      <el-tooltip class="box-item" effect="dark" show-after="300" content="点击展开更多设置" placement="right">
         <el-icon :size="18" color="#222" class="mr-3">
           <button class="icon-btn mx-2 !outline-none" @click="click()">
             <i-zondicons:indent-decrease v-if="theme.compact" class="icon-footer" />
@@ -13,16 +13,17 @@
         </el-icon>
       </el-tooltip>
     </div>
-    <div class="nvmer overflow-y-auto">
+    <div class="nvmer overflow-y-auto" v-if="theme.compact">
       <!-- 采矿默认参数设置 -->
-      <div class=" " v-if="theme.compact">
+      <div class=" ">
         <h2
-          class="sticky bg-cyan-300 z-99 top-0 text-lg flex justify-center items-center"
+          class="sticky z-99 top-0 text-lg flex justify-center items-center bg-light-50"
           @click="showMiningConfig = !showMiningConfig"
         >
           配置当前工厂的默认参数
           <div class="pt-2 ml-5">
             <el-tooltip
+              show-after="300"
               class="box-item"
               effect="dark"
               :content="showMiningConfig ? '点击收起' : '点击展开'"
@@ -31,12 +32,11 @@
               <i-zondicons:arrow-thick-up v-if="showMiningConfig" />
               <i-zondicons:arrow-thick-down v-else />
             </el-tooltip>
-            <el-tooltip class="box-item" effect="dark" content="删除恢复默认" placement="top">
+            <el-tooltip show-after="300" class="box-item" effect="dark" content="删除恢复默认" placement="top">
               <i-ant-design:delete-filled class="ml-2" @click.stop="config.restoreMinings()" />
             </el-tooltip>
           </div>
         </h2>
-        <hr style="border-top-width: 3px" />
         <ul class="m-3 overflow-y-auto" :style="{ height: showMiningConfig ? '430px' : '0px' }">
           <li>
             采矿科技面板倍率
@@ -166,14 +166,15 @@
         </ul>
       </div>
       <!-- 工厂默认参数设置 -->
-      <div class=" " v-if="theme.compact">
+      <div class=" ">
         <h2
-          class="sticky top-0 text-lg flex justify-center items-center"
+          class="sticky top-0 text-lg flex justify-center items-center bg-light-50"
           @click="showFactoryConfig = !showFactoryConfig"
         >
           批量配置工厂设置
           <div class="pt-2 ml-5">
             <el-tooltip
+              show-after="300"
               class="box-item"
               effect="dark"
               :content="showFactoryConfig ? '点击收起' : '点击展开'"
@@ -182,12 +183,11 @@
               <i-zondicons:arrow-thick-up v-if="showFactoryConfig" />
               <i-zondicons:arrow-thick-down v-else />
             </el-tooltip>
-            <el-tooltip class="box-item" effect="dark" content="删除恢复默认" placement="top">
+            <el-tooltip show-after="300" class="box-item" effect="dark" content="删除恢复默认" placement="top">
               <i-ant-design:delete-filled class="ml-2" @click.stop="config.restoreFactory()" />
             </el-tooltip>
           </div>
         </h2>
-        <hr style="border-top-width: 3px" />
         <ul class="m-3 overflow-y-auto" :style="{ height: showFactoryConfig ? '380px' : '0px' }">
           <li class="items-center">
             默认采矿设备1
@@ -310,6 +310,10 @@
           </li>
         </ul>
       </div>
+      <!-- 操作按钮区 -->
+      <div class="flex justify-center items-center">
+        <el-button type="warning" round @click="restorConfig">清除所有配置信息</el-button>
+      </div>
     </div>
   </div>
 </template>
@@ -333,7 +337,7 @@ const config = useConfigStore();
 
 const { t, availableLocales, locale } = useI18n();
 const widthOT = computed(() => {
-  return theme.compact ? '420px' : '50px';
+  return theme.compact ? '420px' : '0px';
 });
 
 const click = () => {
@@ -401,21 +405,32 @@ const changeSprayingConfig = (pro_mode) => {
   config.changeConfig();
 };
 
-const showMiningConfig = ref(false);
-const showFactoryConfig = ref(false);
+const showMiningConfig = ref(true);
+const showFactoryConfig = ref(true);
 </script>
 <style lang="scss" scoped>
+.title {
+  height: 45px;
+  border-bottom: #575757 solid 2px;
+}
+.title h1 {
+  font-weight: 700;
+}
 .container-left {
+  background-color: #fff;
+  border-right: 2px solid #eee;
+  z-index: 100;
   height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
   width: v-bind('widthOT');
-  background-color: #eee;
-  transition: width 0.3s;
 }
 .icon-footer {
   font-size: 1.3em;
 }
 .nvmer {
-  height: calc(100vh - 65px);
+  height: calc(100vh - 45px);
   min-width: 323px;
 }
 .nvmer::-webkit-scrollbar {
@@ -424,7 +439,6 @@ const showFactoryConfig = ref(false);
   background-color: #bbbbbb; /* or add it to the track */
 }
 .nvmer::-webkit-scrollbar-thumb {
-  background: #575757;
 }
 .nvmer li {
   margin: 0.75rem;

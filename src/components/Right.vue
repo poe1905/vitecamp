@@ -1,26 +1,15 @@
 <template>
-  <div class="">
-    <div class="top pt-3 pl-3 pb-3 flex items-center">
-      <!-- <el-tooltip class="box-item" effect="dark" content="点击展开更多设置" placement="top">
-        <el-icon :size="18" color="#222" class="mr-5">
-          <button class="icon-btn mx-2 !outline-none" @click="click()">
-            <i-zondicons:indent-decrease v-if="theme.compact" class="icon-footer" />
-            <i-zondicons:indent-increase v-else class="icon-footer -rotate-x-180" />
-          </button>
-        </el-icon>
-      </el-tooltip> -->
-
-      <!-- <span class="mr-5">更多设置</span> -->
-      <el-button type="warning" round @click="restorConfig">清除所有配置信息</el-button>
-    </div>
-
+  <div :class="theme.compact ? 'container-right-show' : 'container-right-hide'">
     <div class="container-right overflow-y-auto">
       <div class="add-items min-h-20 max-h-95 overflow-y-auto">
         <div class="sticky top-0 z-99 p-5">
           选择目标物
           <ElButton @click="openSelect"> 添加一个新产物</ElButton>
           <ElButton v-show="Object.keys(productList).length > 0" @click="cloneSelect"> 清空产物列表</ElButton>
-          {{ productList }}
+
+          <span v-if="devModel">
+            {{ productList }}
+          </span>
         </div>
 
         <div v-show="productList" class=" ">
@@ -43,127 +32,129 @@
       </div>
       <DSPElDialog :visible="dialogFormVisible" :close="closeProduct" :clickSelect="selectProduct"></DSPElDialog>
       <!-- 配方详情列表内容 -->
-      <div class="lists min-h-35">
-        <div class="sticky top-0 z-99 list-title">
-          <ul class="flex text-center">
-            <li class="btn-action">操作</li>
-            <li class="target-product">目标产物</li>
-            <li class="demand">需求量</li>
-            <li class="plant">所需工厂</li>
-            <li class="recipe">配方选择</li>
-            <li class="production">增产剂等级</li>
-            <li class="production-model">增产模式选择</li>
-            <li class="plant-model">工厂类型选择</li>
-          </ul>
-        </div>
-        <div v-show="recipeList.list_data.length === 0" class="flex justify-center items-center" style="height: 115px">
-          展示产物信息
-        </div>
+      <div>
+        <div class="lists min-h-35">
+          <div class="sticky top-0 z-99 list-title">
+            <ul class="flex text-center">
+              <li class="btn-action">操作</li>
+              <li class="target-product">目标产物</li>
+              <li class="demand">需求量</li>
+              <li class="plant">所需工厂</li>
+              <li class="recipe">配方选择</li>
+              <li class="production">增产剂等级</li>
+              <li class="production-model">增产模式选择</li>
+              <li class="plant-model">工厂类型选择</li>
+            </ul>
+          </div>
+          <div
+            v-show="recipeList.list_data.length === 0"
+            class="flex justify-center items-center"
+            style="height: 115px"
+          >
+            展示产物信息
+          </div>
 
-        <!-- 循环列表开始 -->
-        <div v-for="result in recipeList.list_data" :key="result" class="list-content flex text-center">
-          <div class="btn-action btn flex justify-center items-center">
-            <ElButton
-              plain
-              size="small"
-              @click="set_mine(result.key)"
-              color="recipeList.mineralize_list[result.key] ? '#626aef': '#222222' "
-              >{{ recipeList.mineralize_list[result.key] ? '取消原矿' : '视为原矿' }}
-            </ElButton>
-          </div>
-          <div class="target-product flex justify-center items-center">
-            <ProductImg :imgKey="result.key" class="inline-block" />
-          </div>
-          <div class="demand">
-            {{ result.efficiency }}
-            <div v-if="Object.keys(recipeList.excessProduct).length > 0 && recipeList.excessProduct[result.key]">
-              <div v-for="excessProduct in Object.keys(recipeList.excessProduct[result.key])">
-                +来自 {{ DSP[excessProduct].name }} 的 {{ recipeList.excessProduct[result.key][excessProduct] }}
+          <!-- 循环列表开始 -->
+          <div v-for="result in recipeList.list_data" :key="result" class="list-content flex text-center border-dashed">
+            <div class="btn-action btn flex justify-center items-center">
+              <el-Button plain size="small" @click="set_mine(result.key)"
+                >{{ recipeList.mineralize_list[result.key] ? '取消原矿' : '视为原矿' }}
+              </el-Button>
+            </div>
+            <div class="target-product flex justify-center items-center">
+              <ProductImg :imgKey="result.key" class="inline-block" />
+            </div>
+            <div class="demand">
+              {{ result.efficiency }}
+              <div v-if="Object.keys(recipeList.excessProduct).length > 0 && recipeList.excessProduct[result.key]">
+                <div v-for="excessProduct in Object.keys(recipeList.excessProduct[result.key])">
+                  +来自 {{ DSP[excessProduct].name }} 的 {{ recipeList.excessProduct[result.key][excessProduct] }}
+                </div>
               </div>
             </div>
-          </div>
-          <div class="plant flex justify-center items-center">
-            <ProductImg :imgKey="result.factoriesNum.key" class="inline-block" />
-            {{ result.factoriesNum.num }}
-          </div>
-          <div class="recipe flex-col">
-            <div v-for="(recipe, index) in recipeList.item_data[result.key]" :key="recipe">
-              <div
-                v-if="index != 0"
-                :class="{ active: recipeList.item_recipe_choices[result.key] == index }"
-                class="flex items-center m-3 w-60 bg-current cursor-pointer"
-                @click="changeRecipeOf(result.key, index)"
-              >
-                <div v-for="material in Object.keys(recipeList.recipe_lists[recipe].in)">
-                  <ProductImg
-                    :imgKey="material"
-                    class="inline-block mr-1"
-                    :width="35"
-                    :num="recipeList.recipe_lists[recipe].in[material]"
-                  />
-                </div>
-
-                <div v-if="Object.keys(recipeList.recipe_lists[recipe].in).length > 0" class="text-cool-gray-50">
-                  <i-zondicons:arrow-thin-right> </i-zondicons:arrow-thin-right>
-                </div>
-                <div v-for="product in Object.keys(recipeList.recipe_lists[recipe].out)">
-                  <ProductImg
-                    :imgKey="product"
-                    class="inline-block mr-1"
-                    :width="35"
-                    :num="recipeList.recipe_lists[recipe].out[product]"
-                  />
-                </div>
-                <span class="text-cool-gray-50" style="transform: scale(0.8)"
-                  >({{ recipeList.recipe_lists[recipe].time }}s)</span
+            <div class="plant flex justify-center items-center">
+              <ProductImg :imgKey="result.factoriesNum.key" class="inline-block" />
+              {{ result.factoriesNum.num }}
+            </div>
+            <div class="recipe flex-col">
+              <div v-for="(recipe, index) in recipeList.item_data[result.key]" :key="recipe">
+                <div
+                  v-if="index != 0"
+                  :class="{ active: recipeList.item_recipe_choices[result.key] == index }"
+                  class="flex items-center m-2 w-85 pr-2 pl-2 rounded-lg bg-current cursor-pointer"
+                  @click="changeRecipeOf(result.key, index)"
                 >
+                  <div v-for="material in Object.keys(recipeList.recipe_lists[recipe].in)">
+                    <ProductImg
+                      :imgKey="material"
+                      class="inline-block mr-1"
+                      :width="35"
+                      :num="recipeList.recipe_lists[recipe].in[material]"
+                    />
+                  </div>
+
+                  <div v-if="Object.keys(recipeList.recipe_lists[recipe].in).length > 0" class="text-cool-gray-50">
+                    <i-zondicons:arrow-thin-right> </i-zondicons:arrow-thin-right>
+                  </div>
+                  <div v-for="product in Object.keys(recipeList.recipe_lists[recipe].out)">
+                    <ProductImg
+                      :imgKey="product"
+                      class="inline-block mr-1"
+                      :width="35"
+                      :num="recipeList.recipe_lists[recipe].out[product]"
+                    />
+                  </div>
+                  <span class="text-cool-gray-50" style="transform: scale(0.8)"
+                    >({{ recipeList.recipe_lists[recipe].time }}s)</span
+                  >
+                </div>
               </div>
             </div>
-          </div>
-          <!-- 增产剂等级 -->
-          <div class="production flex">
-            <div
-              v-for="(sprayingOption, index) in config.miningSprayingOptions"
-              key="sprayingOption.name"
-              class="ml-2 bg-current cursor-pointer"
-              @click="changeRecipeRecipeChoices(result.key, 'additional_level', sprayingOption.key)"
-              :class="{ active: get_item_recipe_choices(result.key)['additional_level'] == sprayingOption.key }"
-            >
-              <!-- get_item_recipe_choices(result.key) -->
-              <div v-if="sprayingOption.key == 0" class="text-cool-gray-50 text-xs text-center leading-loose">
-                {{ sprayingOption.name }}
+            <!-- 增产剂等级 -->
+            <div class="production flex">
+              <div
+                v-for="(sprayingOption, index) in config.miningSprayingOptions"
+                key="sprayingOption.name"
+                class="ml-2 bg-current cursor-pointer miningInc rounded-lg"
+                @click="changeRecipeRecipeChoices(result.key, 'additional_level', sprayingOption.key)"
+                :class="{ active: get_item_recipe_choices(result.key)['additional_level'] == sprayingOption.key }"
+              >
+                <!-- get_item_recipe_choices(result.key) -->
+                <div v-if="sprayingOption.key == 0" class="text-cool-gray-50 text-xs text-center leading-loose">
+                  {{ sprayingOption.name }}
+                </div>
+                <div v-else>
+                  <ProductImg width="35" :imgKey="sprayingOption.name" class="inline-block" />
+                </div>
               </div>
-              <div v-else>
-                <ProductImg width="35" :imgKey="sprayingOption.name" class="inline-block" />
+            </div>
+            <!-- 选择增产剂模式 -->
+            <div class="production-model flex">
+              <div
+                v-for="option in config.miningIncOptions[get_item_recipe_choices(result.key)['additional_mode_index']]"
+                class="ml-2 bg-current cursor-pointer miningInc rounded-lg"
+                :class="{ active: get_item_recipe_choices(result.key)['additional_mode'] == option.key }"
+                :key="option"
+                @click="changeRecipeRecipeChoices(result.key, 'additional_mode', option.key)"
+              >
+                <span class="text-cool-gray-50"> {{ option.name }}</span>
               </div>
             </div>
-          </div>
-          <!-- 选择增产剂模式 -->
-          <div class="production-model flex">
-            <div
-              v-for="option in config.miningIncOptions[get_item_recipe_choices(result.key)['additional_mode_index']]"
-              class="ml-2 bg-current cursor-pointer"
-              :class="{ active: get_item_recipe_choices(result.key)['additional_mode'] == option.key }"
-              :key="option"
-              @click="changeRecipeRecipeChoices(result.key, 'additional_mode', option.key)"
-            >
-              <span class="text-cool-gray-50"> {{ option.name }}</span>
+            <div class="flex plant-model">
+              <div
+                class="bg-current ml-4 p-1 rounded-lg cursor-pointer"
+                :class="{ active: get_item_recipe_choices(result.key)['architecture'] == index }"
+                v-for="(facility, index) in facilityLabel(
+                  recipeList.item_data[result.key],
+                  recipeList.item_recipe_choices[result.key],
+                )"
+                @click="changeRecipeRecipeChoices(result.key, 'architecture', index)"
+              >
+                <ProductImg width="35" :imgKey="facility.名称" class="inline-block" />
+              </div>
             </div>
+            <div v-if="0 != Number(result.factoriesNum)"></div>
           </div>
-          <div class="flex plant-model">
-            <div
-              class="bg-current ml-4 p-1"
-              :class="{ active: get_item_recipe_choices(result.key)['architecture'] == index }"
-              v-for="(facility, index) in facilityLabel(
-                recipeList.item_data[result.key],
-                recipeList.item_recipe_choices[result.key],
-              )"
-              @click="changeRecipeRecipeChoices(result.key, 'architecture', index)"
-            >
-              <ProductImg width="22" :imgKey="facility.名称" class="inline-block" />
-            </div>
-          </div>
-          <div v-if="0 != Number(result.factoriesNum)"></div>
         </div>
       </div>
 
@@ -200,28 +191,29 @@ import {
   set_item_recipe_choices,
   change_recipe_of,
   mineralize,
-  unmineralize,
+  unMineralize,
 } from '@/utils/calculate';
 const theme = useCounterStore();
 const config = useConfigStore();
 let dialogFormVisible = ref(false); //显示dialog 框
+let devModel = ref(import.meta.env.DEV); //显示dialog 框
 const click = () => {
   // 点击切换侧边栏状态;
   theme.changeCompact();
 };
 
 const { t, availableLocales, locale } = useI18n();
-
+console.log();
 const set_mine = (key) => {
   if (recipeList.value.mineralize_list[key]) {
-    unmineralize(key);
+    unMineralize(key);
   } else {
     mineralize(key);
   }
   config.changeConfig();
 };
 const del_mine = (key) => {
-  unmineralize(key);
+  unMineralize(key);
   config.changeConfig();
 };
 const openSelect = () => {
@@ -290,37 +282,40 @@ const change_energy = () => {
 </script>
 
 <style lang="scss">
+.container-right-show {
+  padding-left: 420px;
+}
+.container-right-show {
+  margin-left: 0px;
+}
+.miningInc {
+  font-size: 12px;
+  padding: 4px 8px;
+}
+// 未选择的背景色
 .bg-current {
   background-color: #878787;
 }
 .top {
-  height: 45px;
-  background-color: #9bdad2;
-  border-bottom: #8c949c solid 2px;
+  background-color: red;
 }
-.sticky {
-  color: #ffff;
-  background-color: #1d1d37;
-}
+
 .container-right {
-  background-color: #a7a4a4;
-  height: calc(100vh - 45px);
   border-bottom: #8c949c solid 2px;
 }
 
 .lists {
-  background-color: #a1c7bf;
   border-bottom: #8c949c solid 2px;
-  /* height: calc(100vh - 138px); */
 }
 .lists > div {
-  background-color: #a1c7bf;
 }
 .list-title {
+  position: sticky;
+  top: 0;
   border-bottom: #42586c solid 2px;
 }
 .list-content {
-  border-bottom: solid 2px #7386aa;
+  border-bottom: dashed 2px #7386aa;
 }
 
 .list-content:nth-last-child(1) {
@@ -367,7 +362,7 @@ const change_energy = () => {
 }
 /* 配方的宽度百分比 */
 .recipe {
-  width: 14%;
+  width: 18%;
 }
 .production {
   width: 20%;

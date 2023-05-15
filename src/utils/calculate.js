@@ -654,8 +654,7 @@ export const calculate = (needs_list) => {
 
   item_graph = build_item_graph();
 
-
-  // build_item_list();
+  build_item_list();
   item_price = get_item_price();
 
 
@@ -1527,11 +1526,15 @@ export const batchChangeFactoryOf = (factory, building) => {
 
 
 export const mineralize = (item) => {
+  console.log("mineralize_list", mineralize_list);
+  console.log("item_graph", item_graph);
   mineralize_list[item] = JSON.parse(JSON.stringify(item_graph[item]));
   item_graph[item]["material"] = {};
+  console.log("删除之后？？？", item_graph[item]);
 }//原矿化物品
 
-export const unmineralize = (item) => {
+export const unMineralize = (item) => {
+  console.log("mineralize_list", mineralize_list);
   item_graph[item] = JSON.parse(JSON.stringify(mineralize_list[item]));
   delete mineralize_list[item];
 }//取消原矿化
