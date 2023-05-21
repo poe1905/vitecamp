@@ -43,8 +43,7 @@
             <el-input-number
               @change="changeConfig"
               class="w-7"
-              :min="0.0001"
-              :max="99999"
+              :min="0.000001"
               size="small"
               v-model="config.scienceResearchSpeed"
               controls-position="right"
@@ -57,7 +56,6 @@
               class="w-7"
               @change="changeConfig"
               :min="1"
-              :max="28"
               size="small"
               v-model="config.miniCore"
               controls-position="right"
@@ -70,7 +68,6 @@
               class="w-7"
               @change="changeConfig"
               :min="1"
-              :max="10"
               size="small"
               v-model="config.largeCore"
               controls-position="right"
@@ -82,8 +79,7 @@
             <el-input-number
               @change="changeConfig"
               class="w-7"
-              :min="1"
-              :max="9"
+              :min="0.000001"
               size="small"
               v-model="config.largeCoreWorkingSpeed"
               controls-position="right"
@@ -95,7 +91,7 @@
             <el-input-number
               @change="changeConfig"
               class="w-7"
-              :min="1"
+              :min="0.000001"
               size="small"
               v-model="config.oilWellSpeed"
               controls-position="right"
@@ -107,7 +103,7 @@
             <el-input-number
               @change="changeConfig"
               class="w-7"
-              :min="0.0001"
+              :min="0.000001"
               :step="0.1"
               size="small"
               v-model="config.hydrogenCollectionRate"
@@ -119,7 +115,7 @@
             <el-input-number
               @change="changeConfig"
               class="w-7"
-              :min="0.0001"
+              :min="0.000001"
               :step="0.1"
               size="small"
               v-model="config.heavyHydrogenCollectionRate"
@@ -131,7 +127,7 @@
             <el-input-number
               @change="changeConfig"
               class="w-7"
-              :min="0.0001"
+              :min="0.000001"
               :step="0.1"
               size="small"
               v-model="config.combustibleIceCollectionRate"
@@ -140,7 +136,7 @@
           </li>
 
           <li>
-            分馏塔过氢量
+            分馏塔分钟过氢量
             <el-input-number
               @change="changeConfig"
               class="w-7"
