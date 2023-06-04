@@ -122,7 +122,7 @@ const scheme_data = {
       needs_list = {};
     }
     show_needs_list();
-    calculate();
+    // calculate();
     if (Object.keys(needs_list).length == 0) {
       document.getElementById("resetNeeds").innerHTML = "";
     }
@@ -249,7 +249,7 @@ const scheme_data = {
     natural_production_line[i]["architecture"] = 0;
     natural_production_line[i]["additional_mode"] = 0;
     show_natural_production_line();
-    calculate();
+    // calculate();
   }//改变固有产线物品
 
   function changeFractionatingSpeed() {
@@ -264,7 +264,7 @@ const scheme_data = {
 
   function IfEnergyContainMiner() {
     scheme_data.energy_contain_miner = (scheme_data.energy_contain_miner + 1) % 2;
-    calculate();
+    // calculate();
   }
 }//这里是前端按钮调用的布局相关的函数
 
@@ -541,6 +541,7 @@ export const calculate = (needs_list) => {
     var recipe = game_data.recipe_data[item_data[natural_production_line[id]["目标物品"]][natural_production_line[id]["recipe_id"]]];
 
     var recipe_time = 60 * natural_production_line[id]["建筑数量"] * game_data.factory_data[recipe["facility"]][natural_production_line[id]["architecture"]]["倍率"] / recipe["time"];
+    console.log("recipe_time", recipe_time);
     if ((natural_production_line[id]["additional_level"] == 0) || (natural_production_line[id]["additional_mode"] == 0)) {
       for (var item in recipe["material"]) {
         if (item in in_out_list) {
@@ -767,7 +768,6 @@ export const calculate = (needs_list) => {
   list_data = list_data.filter(item => {
     return !(Number(item.efficiency) == 0 && !excessProduct[item.key])
   })
-
   return {
     result_dict,
     building_list,
@@ -1313,7 +1313,8 @@ function show_result_dict() {
       else {
         building_list[game_data.factory_data[game_data.recipe_data[recipe_id]["facility"]][scheme_for_recipe["architecture"]]["名称"]] = Math.ceil(build_number - 0.5 * 0.1 ** fixed_num);
       }
-    } game_data.factory_data[""]
+    }
+    game_data.factory_data[""]
     var factory = game_data.recipe_data[recipe_id]["facility"];
     if (factory != "巨星采集" && !(!scheme_data.energy_contain_miner && (factory == "采矿设备" || factory == "抽水设备" || factory == "抽油设备"))) {
       var e_cost = build_number * game_data.factory_data[game_data.recipe_data[recipe_id]["facility"]][scheme_for_recipe["architecture"]]["耗能"];
@@ -1346,7 +1347,7 @@ function show_result_dict() {
 
   function add_side_products_in_other_row(item) {
     var item_num = result_dict[item];
-
+    console.log("item_num", item_num);
     for (var side_products in item_graph[item]["by-product"]) {
       if (excessProduct[side_products] == undefined) {
         excessProduct[side_products] = {}
@@ -1360,7 +1361,14 @@ function show_result_dict() {
   list_data = []
   for (var i in result_dict) {
     var recipe_id = item_data[i][scheme_data.item_recipe_choices[i]];
-    var factory_number = get_factory_number(result_dict[i], i).toFixed(fixed_num);
+
+    var factory_number
+    if (i in mineralize_list) {
+      factory_number = 0
+    } else {
+      factory_number = get_factory_number(result_dict[i], i).toFixed(fixed_num);
+    }
+
     list_data.push(
       {
         key: i,
@@ -1370,10 +1378,12 @@ function show_result_dict() {
         //图片形式
         factoriesNum: {
           key: game_data.factory_data[game_data.recipe_data[recipe_id]["facility"]][scheme_data.scheme_for_recipe[recipe_id]["architecture"]]["名称"],
-          num: factory_number + is_mineralized(i)
+          num: factory_number + is_mineralized(i),
+          is_mineralized: is_mineralized(i) === "(原矿化)"
         }
       }
     )
+
     // str += "<tr id=\"row_of_" + i + "\"><th><a href=\"Javascript:mineralize('" + i + "')\">视为原矿</a></th>" + //操作
     //   "<th>" + "<img src=\"./image/" + i + ".png\" title=\"" + i + "\" style=\"width: 40px; height: 40px;\">" + "</th>" +  //目标物品
     //   "<th id=\"num_of_" + i + "\">" + get_gross_output(result_dict[i], i).toFixed(fixed_num) + "</th>" +  //分钟毛产出
@@ -1481,6 +1491,19 @@ export const set_item_recipe_choices = (key, type, index) => {
   const types = ["additional_level", "additional_mode", "architecture", "additional_mode_index"]
   if (types.indexOf(type) !== -1) {
     scheme_data.scheme_for_recipe[recipe_id][type] = index
+  }
+}
+
+// 获取单个配置数据
+export const get_one_item_recipe_choices = (key, type, index) => {
+  // 修改单个配置数据
+  let recipe_id = item_data[key][scheme_data.item_recipe_choices[key]];
+  const types = ["additional_level", "additional_mode", "architecture", "additional_mode_index"]
+  if (types.indexOf(type) !== -1) {
+    return scheme_data.scheme_for_recipe[recipe_id][type]
+  } else {
+    console.error("未找到传入的类型数据，请确认传入是否正确")
+    return ""
   }
 }
 export const change_recipe_of = (key, index) => {

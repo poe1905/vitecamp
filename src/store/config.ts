@@ -81,10 +81,6 @@ const config = defineStore({
       defaultSpraying: '0', // 默认喷涂点数
       miningSprayingOptions: [
         {
-          key: '0',
-          name: '不使用',
-        },
-        {
           key: '1',
           name: 'accelerator_1',
           label: '增产剂MK.Ⅰ',
@@ -105,7 +101,7 @@ const config = defineStore({
         [
           {
             key: '0',
-            name: '不使用',
+            name: '该产物不支持使用增产剂',
           },
         ],
         [
@@ -129,10 +125,6 @@ const config = defineStore({
           },
         ],
         [
-          {
-            key: '0',
-            name: '不使用',
-          },
           {
             key: '1',
             name: '增产模式',
@@ -154,10 +146,6 @@ const config = defineStore({
         ],
       ],
       IncOptions: [
-        {
-          key: '0',
-          name: '不使用',
-        },
         {
           key: '1',
           name: '增产模式',

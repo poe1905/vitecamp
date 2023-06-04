@@ -20,6 +20,7 @@ declare module '@vue/runtime-core' {
     ElSelect: typeof import('element-plus/es')['ElSelect']
     ElTooltip: typeof import('element-plus/es')['ElTooltip']
     EnReadme: typeof import('./components/EnReadme.md')['default']
+    FormulaSelectionDialog: typeof import('./components/FormulaSelectionDialog/FormulaSelectionDialog.vue')['default']
     'IAntDesign:deleteFilled': typeof import('~icons/ant-design/delete-filled')['default']
     'IZondicons:arrowThickDown': typeof import('~icons/zondicons/arrow-thick-down')['default']
     'IZondicons:arrowThickUp': typeof import('~icons/zondicons/arrow-thick-up')['default']

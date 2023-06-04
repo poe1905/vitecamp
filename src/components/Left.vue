@@ -335,7 +335,14 @@ const { t, availableLocales, locale } = useI18n();
 const widthOT = computed(() => {
   return theme.compact ? '420px' : '0px';
 });
-
+const restorConfig = () => {
+  ElMessage({
+    message: '重置了所有配置信息',
+    type: 'warning',
+  });
+  config.restoreMinings();
+  config.restoreFactory();
+};
 const click = () => {
   // 点击切换侧边栏状态;
   theme.changeCompact();

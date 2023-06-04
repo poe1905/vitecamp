@@ -41,9 +41,9 @@
               <li class="demand">需求量</li>
               <li class="plant">所需工厂</li>
               <li class="recipe">配方选择</li>
-              <li class="production">增产剂等级</li>
+              <li class="production">工厂类型选择</li>
               <li class="production-model">增产模式选择</li>
-              <li class="plant-model">工厂类型选择</li>
+              <li class="plant-model">增产剂等级</li>
             </ul>
           </div>
           <div
@@ -72,17 +72,23 @@
                 </div>
               </div>
             </div>
-            <div class="plant flex justify-center items-center">
+            <!-- 所需要的工厂 -->
+            <div class="plant flex items-center">
               <ProductImg :imgKey="result.factoriesNum.key" class="inline-block" />
               {{ result.factoriesNum.num }}
             </div>
-            <div class="recipe flex-col">
+            <!-- 选择的配方 -->
+            <div class="recipe flex-col" v-if="!result.factoriesNum.is_mineralized">
               <div v-for="(recipe, index) in recipeList.item_data[result.key]" :key="recipe">
+                <!-- 配方的第0 个, 啥也不是, 冗余数据 ,需要跳出 -->
                 <div
-                  v-if="index != 0"
-                  :class="{ active: recipeList.item_recipe_choices[result.key] == index }"
-                  class="flex items-center m-2 w-85 pr-2 pl-2 rounded-lg bg-current cursor-pointer"
-                  @click="changeRecipeOf(result.key, index)"
+                  v-if="index != 0 && recipeList.item_recipe_choices[result.key] == index"
+                  :class="{
+                    active: recipeList.item_recipe_choices[result.key] == index,
+                    'cursor-pointer': recipeList.item_data[result.key].length != 2,
+                  }"
+                  class="flex items-center m-2 w-85 pr-2 pl-2 rounded-lg bg-current"
+                  @click="changeRecipeOf(result.key, index, recipeList, result.key)"
                 >
                   <div v-for="material in Object.keys(recipeList.recipe_lists[recipe].in)">
                     <ProductImg
@@ -105,42 +111,14 @@
                     />
                   </div>
                   <span class="text-cool-gray-50" style="transform: scale(0.8)"
-                    >({{ recipeList.recipe_lists[recipe].time }}s)</span
-                  >
+                    >({{ recipeList.recipe_lists[recipe].time }}s)
+                    {{ recipeList.item_data[result.key].length == 2 ? '' : ' 点击选择配方' }}
+                  </span>
                 </div>
               </div>
             </div>
-            <!-- 增产剂等级 -->
-            <div class="production flex">
-              <div
-                v-for="(sprayingOption, index) in config.miningSprayingOptions"
-                key="sprayingOption.name"
-                class="ml-2 bg-current cursor-pointer miningInc rounded-lg"
-                @click="changeRecipeRecipeChoices(result.key, 'additional_level', sprayingOption.key)"
-                :class="{ active: get_item_recipe_choices(result.key)['additional_level'] == sprayingOption.key }"
-              >
-                <!-- get_item_recipe_choices(result.key) -->
-                <div v-if="sprayingOption.key == 0" class="text-cool-gray-50 text-xs text-center leading-loose">
-                  {{ sprayingOption.name }}
-                </div>
-                <div v-else>
-                  <ProductImg width="35" :imgKey="sprayingOption.name" class="inline-block" />
-                </div>
-              </div>
-            </div>
-            <!-- 选择增产剂模式 -->
-            <div class="production-model flex">
-              <div
-                v-for="option in config.miningIncOptions[get_item_recipe_choices(result.key)['additional_mode_index']]"
-                class="ml-2 bg-current cursor-pointer miningInc rounded-lg"
-                :class="{ active: get_item_recipe_choices(result.key)['additional_mode'] == option.key }"
-                :key="option"
-                @click="changeRecipeRecipeChoices(result.key, 'additional_mode', option.key)"
-              >
-                <span class="text-cool-gray-50"> {{ option.name }}</span>
-              </div>
-            </div>
-            <div class="flex plant-model">
+            <!-- 工厂选择 -->
+            <div class="flex plant-model justify-start" v-if="!result.factoriesNum.is_mineralized">
               <div
                 class="bg-current ml-4 p-1 rounded-lg cursor-pointer"
                 :class="{ active: get_item_recipe_choices(result.key)['architecture'] == index }"
@@ -153,6 +131,43 @@
                 <ProductImg width="35" :imgKey="facility.名称" class="inline-block" />
               </div>
             </div>
+            <!-- 选择增产剂模式 -->
+            <!-- && get_item_recipe_choices(result.key)['additional_level'] != 0 -->
+            <div class="production-model flex" v-if="!result.factoriesNum.is_mineralized">
+              <div
+                v-for="option in config.miningIncOptions[get_item_recipe_choices(result.key)['additional_mode_index']]"
+                class="ml-2 bg-current cursor-pointer miningInc rounded-lg"
+                :class="{ active: get_item_recipe_choices(result.key)['additional_mode'] == option.key }"
+                :key="option"
+                @click="changeRecipeRecipeChoices(result.key, 'additional_mode', option.key)"
+              >
+                <span class="text-cool-gray-50"> {{ option.name }}</span>
+              </div>
+            </div>
+            <!-- 增产剂等级 -->
+            <div
+              class="production flex"
+              v-if="!result.factoriesNum.is_mineralized && get_item_recipe_choices(result.key)['additional_mode'] != 0"
+            >
+              {{ get_item_recipe_choices(result.key)['additional_level'] }}
+              <div
+                v-for="(sprayingOption, index) in config.miningSprayingOptions"
+                key="sprayingOption.name"
+                class="ml-2 bg-current cursor-pointer miningInc rounded-lg"
+                @click="changeRecipeRecipeChoices(result.key, 'additional_level', sprayingOption.key)"
+                :class="{ active: get_item_recipe_choices(result.key)['additional_level'] == sprayingOption.key }"
+              >
+                <!-- get_item_recipe_choices(result.key) -->
+                <!-- <div v-if="sprayingOption.key == 0"> -->
+                <!-- {{ sprayingOption.name }}-->
+                <!-- 不使用 -->
+                <!-- </div v-else> -->
+                <div v-if="sprayingOption.key != 0">
+                  <ProductImg width="35" :imgKey="sprayingOption.name" class="inline-block" />
+                </div>
+              </div>
+            </div>
+
             <div v-if="0 != Number(result.factoriesNum)"></div>
           </div>
         </div>
@@ -168,13 +183,20 @@
           <div>
             预估电力需求下限：{{ recipeList.energy_cost.toFixed(2) }} MW
             <el-button color="#626aef" :dark="isDark" @click="change_energy">
-              {{ config.energy_contain_miner ? '考虑采集设备耗电' : '忽视采集设备耗电' }}</el-button
+              {{ config.energy_contain_miner ? '忽视采集设备耗电' : '考虑采集设备耗电' }}</el-button
             >
           </div>
         </template>
         <EnReadme class=""></EnReadme>
       </div>
     </div>
+    <FormulaSelectionDialog
+      :visible="visibleFormulaDialog"
+      :close="closeformuldialog"
+      :date="FormulaDialogDate"
+      :dateKey="FormulaDialogDateKey"
+      :changeRecipeOf="changeRecipeOf"
+    ></FormulaSelectionDialog>
   </div>
 </template>
 
@@ -192,11 +214,16 @@ import {
   change_recipe_of,
   mineralize,
   unMineralize,
+  get_one_item_recipe_choices,
 } from '@/utils/calculate';
 const theme = useCounterStore();
 const config = useConfigStore();
 let dialogFormVisible = ref(false); //显示dialog 框
 let devModel = ref(import.meta.env.DEV); //显示dialog 框
+
+const visibleFormulaDialog = ref(false);
+const FormulaDialogDate = ref([]);
+const FormulaDialogDateKey = ref(0);
 const click = () => {
   // 点击切换侧边栏状态;
   theme.changeCompact();
@@ -254,19 +281,41 @@ const recipeList = computed(() => {
   const data = calculate(productList.value);
   // TODO 这个 console  帮定了依赖项， 如果删除，则丢失，不能相应批量改变
   console.log('数据发生改变，重新计算所有依赖', config.isChange);
+  console.log('data', data);
+  // data.list_data.sost((a) => a.factoriesNum.is_mineralized);
 
   return data;
 });
 
-const changeRecipeOf = (key, index) => {
-  change_recipe_of(key, index);
-  config.changeConfig();
-  // obj.value = !obj.value;
-  // const data = calculate(productList.value);
+const changeRecipeOf = (key, index, array, arrayKey) => {
+  if (array.item_data[arrayKey].length != 2) {
+    visibleFormulaDialog.value = true;
+    FormulaDialogDate.value = array;
+    FormulaDialogDateKey.value = arrayKey;
+  } else {
+    ElMessage({
+      message: '此产物没有配方选择',
+      type: 'warning',
+    });
+  }
+  // change_recipe_of(key, index);
+
+  // config.changeConfig();
+};
+const closeformuldialog = () => {
+  visibleFormulaDialog.value = false;
+  // FormulaDialogDate.value = [];
+  // FormulaDialogDateKey.value = 0;
 };
 const changeRecipeRecipeChoices = (key, type, index) => {
-  console.log(key, type, index);
-  set_item_recipe_choices(key, type, index);
+  // 修改增产剂等级
+  if (get_one_item_recipe_choices(key, type) === index) {
+    console.log(key, type, index);
+    set_item_recipe_choices(key, type, 0);
+  } else {
+    set_item_recipe_choices(key, type, index);
+  }
+
   config.changeConfig();
 };
 const restorConfig = () => {
@@ -321,9 +370,8 @@ const change_energy = () => {
 .list-content:nth-last-child(1) {
   border: none;
 }
-.list-content > div {
+.list-content {
   display: flex;
-  justify-content: center;
   align-items: center;
 }
 
@@ -349,28 +397,27 @@ const change_energy = () => {
   width: 6%;
 }
 .demand {
-  width: 16%;
+  width: 10%;
   display: flex;
   flex-direction: column;
 }
 .plant {
-  width: 10%;
+  width: 6%;
 }
 .list-content .plant {
-  width: 10%;
   /* justify-content: space-evenly; */
 }
 /* 配方的宽度百分比 */
 .recipe {
-  width: 18%;
-}
-.production {
-  width: 20%;
-}
-.production-model {
-  width: 14%;
+  min-width: 356px;
 }
 .plant-model {
-  width: 10%;
+  min-width: 190px;
+}
+.production {
+  min-width: 200px;
+}
+.production-model {
+  min-width: 120px;
 }
 </style>
